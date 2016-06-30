@@ -1,0 +1,1555 @@
+<!DOCTYPE html><html lang="ko" data-cast-api-enabled="true"><head><style name="www-roboto">@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/ek4gzZ-GeXAPcSbHtCeQI_esZW2xOQ-xsNqO47m55DA.woff2)format('woff2');unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/mErvLBYg_cXG3rLvUsKT_fesZW2xOQ-xsNqO47m55DA.woff2)format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/-2n2p-_Y08sg57CNWQfKNvesZW2xOQ-xsNqO47m55DA.woff2)format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/u0TOpm082MNkS5K0Q4rhqvesZW2xOQ-xsNqO47m55DA.woff2)format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/NdF9MtnOpLzo-noMoG0miPesZW2xOQ-xsNqO47m55DA.woff2)format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/Fcx7Wwv8OzT71A3E1XOAjvesZW2xOQ-xsNqO47m55DA.woff2)format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:400;src:local('Roboto Regular'),local('Roboto-Regular'),url(//fonts.gstatic.com/s/roboto/v15/CWB0XYA8bzo0kSThX0UTuA.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/ZLqKeelYbATG60EpZBSDyxJtnKITppOI_IvcXXDNrsc.woff2)format('woff2');unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/oHi30kwQWvpCWqAhzHcCSBJtnKITppOI_IvcXXDNrsc.woff2)format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/rGvHdJnr2l75qb0YND9NyBJtnKITppOI_IvcXXDNrsc.woff2)format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/mx9Uck6uB63VIKFYnEMXrRJtnKITppOI_IvcXXDNrsc.woff2)format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/mbmhprMH69Zi6eEPBYVFhRJtnKITppOI_IvcXXDNrsc.woff2)format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/oOeFwZNlrTefzLYmlVV1UBJtnKITppOI_IvcXXDNrsc.woff2)format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:normal;font-weight:500;src:local('Roboto Medium'),local('Roboto-Medium'),url(//fonts.gstatic.com/s/roboto/v15/RxZJdnzeo3R5zSexge8UUVtXRa8TVwTICgirnJhmVJw.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000;}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/WxrXJa0C3KdtC7lMafG4dRTbgVql8nDJpwnrE27mub0.woff2)format('woff2');unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F;}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/OpXUqTo0UgQQhGj_SFdLWBTbgVql8nDJpwnrE27mub0.woff2)format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/1hZf02POANh32k2VkgEoUBTbgVql8nDJpwnrE27mub0.woff2)format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/cDKhRaXnQTOVbaoxwdOr9xTbgVql8nDJpwnrE27mub0.woff2)format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/K23cxWVTrIFD6DJsEVi07RTbgVql8nDJpwnrE27mub0.woff2)format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/vSzulfKSK0LLjjfeaxcREhTbgVql8nDJpwnrE27mub0.woff2)format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:italic;font-weight:400;src:local('Roboto Italic'),local('Roboto-Italic'),url(//fonts.gstatic.com/s/roboto/v15/vPcynSL0qHq_6dX7lKVByfesZW2xOQ-xsNqO47m55DA.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000;}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0TTOQ_MqJVwkKsUn0wKzc2I.woff2)format('woff2');unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F;}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0TUj_cnvWIuuBMVgbX098Mw.woff2)format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116;}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0UbcKLIaa1LC45dFaAfauRA.woff2)format('woff2');unicode-range:U+1F00-1FFF;}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0Wo_sUJ8uO4YLWRInS22T3Y.woff2)format('woff2');unicode-range:U+0370-03FF;}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0b6up8jxqWt8HVA3mDhkV_0.woff2)format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB;}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0SYE0-AqJ3nfInTTiDXDjU4.woff2)format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF;}@font-face{font-family:'Roboto';font-style:italic;font-weight:500;src:local('Roboto Medium Italic'),local('Roboto-MediumItalic'),url(//fonts.gstatic.com/s/roboto/v15/OLffGBTaF0XFOW1gnuHF0Y4P5ICox8Kq3LLUNMylGO4.woff2)format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215,U+E0FF,U+EFFD,U+F000;}</style><script name="www-roboto">if (document.fonts && document.fonts.load) {document.fonts.load("400 10pt Roboto", "한");document.fonts.load("500 10pt Roboto", "한");}</script><script>__yt_experimental_now = __spf_experimental_now = true;</script><script>var ytcsi = {gt: function(n) {n = (n || '') + 'data_';return ytcsi[n] || (ytcsi[n] = {tick: {},info: {}});},now: window.performance && window.performance.timing &&window.performance.now ? function() {return window.performance.timing.navigationStart + window.performance.now();} : function() {return (new Date()).getTime();},tick: function(l, t, n) {ticks = ytcsi.gt(n).tick;var v = t || ytcsi.now();if (ticks[l]) {ticks['_' + l] = (ticks['_' + l] || [ticks[l]]);ticks['_' + l].push(v);}ticks[l] = v;},info: function(k, v, n) {ytcsi.gt(n).info[k] = v;},setStart: function(s, t, n) {ytcsi.info('yt_sts', s, n);ytcsi.tick('_start', t, n);}};(function(w, d) {ytcsi.setStart('dhs', w.performance ? w.performance.timing.responseStart : null);var isPrerender = (d.visibilityState || d.webkitVisibilityState) == 'prerender';var vName = d.webkitVisibilityState ? 'webkitvisibilitychange' : 'visibilitychange';if (isPrerender) {ytcsi.info('prerender', 1);var startTick = function() {ytcsi.setStart('dhs');d.removeEventListener(vName, startTick);};d.addEventListener(vName, startTick, false);}if (d.addEventListener) {d.addEventListener(vName, function() {ytcsi.tick('vc');}, false);}})(window, document);</script><script>var ytcfg = {d: function() {return (window.yt && yt.config_) || ytcfg.data_ || (ytcfg.data_ = {});},get: function(k, o) {return (k in ytcfg.d()) ? ytcfg.d()[k] : o;},set: function() {var a = arguments;if (a.length > 1) {ytcfg.d()[a[0]] = a[1];} else {for (var k in a[0]) {ytcfg.d()[k] = a[0][k];}}}};</script>    <script>
+      ytcfg.set("EXP_LACT_HISTORY", true);
+    </script>
+  <script>ytcfg.set("EXP_QUICK_FETCH_BISCOTTI", false);ytcfg.set("LACT", null);</script>
+<script>window.yterr = window.yterr || true;</script>  
+
+
+
+
+  <script>
+        (function(){var d={b:"content-snap-width-1",c:"content-snap-width-2",f:"content-snap-width-3",a:"home-content-snap-width-3"};function f(){var a=[],e;for(e in d)a.push(d[e]);return a}
+function g(a){var e=f().concat(["guide-pinned","show-guide"]),b=e.length,h=[];a.replace(/\S+/g,function(a){for(var c=0;c<b;c++)if(a==e[c])return;h.push(a)});
+return h}
+;function l(a,e,b,h){var m=document.getElementsByTagName("html")[0],c=g(m.className);a&&1251<=(window.innerWidth||document.documentElement.clientWidth)&&(c.push("guide-pinned"),e&&c.push("show-guide"));if(b){b=[];var k=(window.innerWidth||document.documentElement.clientWidth)-21-50;1251<=(window.innerWidth||document.documentElement.clientWidth)&&a&&e&&(k-=230);1262<=k?b.push("content-snap-width-3"):1056<=k?b.push("content-snap-width-2"):b.push("content-snap-width-1");h&&1126<=k&&b.push("home-content-snap-width-3");
+c.push.apply(c,b)}m.className=c.join(" ")}
+var n=["yt","www","masthead","sizing","runBeforeBodyIsReady"],p=this;n[0]in p||!p.execScript||p.execScript("var "+n[0]);for(var q;n.length&&(q=n.shift());)n.length||void 0===l?p[q]?p=p[q]:p=p[q]={}:p[q]=l;})();
+
+      try {window.ytbuffer = {};ytbuffer.handleClick = function(e) {var element = e.target || e.srcElement;while (element.parentElement) {if (/(^| )yt-can-buffer( |$)/.test(element.className)) {window.ytbuffer = {bufferedClick: e};element.className += ' yt-is-buffered';break;}element = element.parentElement;}};if (document.addEventListener) {document.addEventListener('click', ytbuffer.handleClick);} else {document.attachEvent('onclick', ytbuffer.handleClick);}} catch(e) {}
+
+    yt.www.masthead.sizing.runBeforeBodyIsReady(false,false,true,false);
+  </script>
+
+      <script src="//s.ytimg.com/yts/jsbin/scheduler-vflAG6jg9/scheduler.js" type="text/javascript" name="scheduler/scheduler"></script>
+
+
+    <script>var ytimg = {};ytimg.count = 1;ytimg.preload = function(src) {var img = new Image();var count = ++ytimg.count;ytimg[count] = img;img.onload = img.onerror = function() {delete ytimg[count];};img.src = src;};</script>
+
+
+          <script src="//s.ytimg.com/yts/jsbin/player-ko_KR-vfl58qrCG/base.js" name="player/base"></script>
+
+
+
+  <link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-core-webp-vflmUuLkq.css" name="www-core">
+      <link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-player-webp-vflOl5Xgc.css" name="www-player">
+
+  <link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-pageframe-webp-vflc9ojLv.css" name="www-pageframe">
+      <script>ytimg.preload("https:\/\/r2---sn-3u-bh2ed.googlevideo.com\/crossdomain.xml");ytimg.preload("https:\/\/r2---sn-3u-bh2ed.googlevideo.com\/generate_204");</script>
+
+
+<title>lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자 - YouTube</title><link rel="canonical" href="https://www.youtube.com/watch?v=9VckXVoJEe0"><link rel="alternate" media="handheld" href="http://m.youtube.com/watch?v=9VckXVoJEe0"><link rel="alternate" media="only screen and (max-width: 640px)" href="http://m.youtube.com/watch?v=9VckXVoJEe0"><link rel="shortlink" href="https://youtu.be/9VckXVoJEe0">      <meta name="title" content="lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자">
+
+      <meta name="description" content="GPU에서 Tensorflow를 실행하기 위한 인스턴스 만들기와 설정을 살펴봅니다. 수업페이지; http://hunkim.github.io/ml/ TensorFlow KR: https://www.facebook.com/groups/TensorFlowKR/ 예제 모음: https:/...">
+
+      <meta name="keywords" content="TensorFlow, AWS">
+
+<link rel="search" type="application/opensearchdescription+xml" href="https://www.youtube.com/opensearch?locale=ko_KR" title="YouTube 동영상 검색"><link rel="shortcut icon" href="https://s.ytimg.com/yts/img/favicon-vflz7uhzw.ico" type="image/x-icon">     <link rel="icon" href="//s.ytimg.com/yts/img/favicon_32-vfl8NGn4k.png" sizes="32x32"><link rel="icon" href="//s.ytimg.com/yts/img/favicon_48-vfl1s0rGh.png" sizes="48x48"><link rel="icon" href="//s.ytimg.com/yts/img/favicon_96-vfldSA3ca.png" sizes="96x96"><link rel="icon" href="//s.ytimg.com/yts/img/favicon_144-vflWmzoXw.png" sizes="144x144"><meta name="theme-color" content="#e62117">        <link rel="alternate" href="android-app://com.google.android.youtube/http/www.youtube.com/watch?v=9VckXVoJEe0">
+    <link rel="alternate" href="ios-app://544007664/vnd.youtube/www.youtube.com/watch?v=9VckXVoJEe0">
+
+      <link rel="alternate" type="application/json+oembed" href="http://www.youtube.com/oembed?format=json&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9VckXVoJEe0" title="lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자">
+  <link rel="alternate" type="text/xml+oembed" href="http://www.youtube.com/oembed?format=xml&amp;url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3D9VckXVoJEe0" title="lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자">
+
+        <meta property="og:site_name" content="YouTube">
+      <meta property="og:url" content="https://www.youtube.com/watch?v=9VckXVoJEe0">
+    <meta property="og:title" content="lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자">
+    <meta property="og:image" content="https://i.ytimg.com/vi/9VckXVoJEe0/maxresdefault.jpg">
+
+      <meta property="og:description" content="GPU에서 Tensorflow를 실행하기 위한 인스턴스 만들기와 설정을 살펴봅니다. 수업페이지; http://hunkim.github.io/ml/ TensorFlow KR: https://www.facebook.com/groups/TensorFlowKR/ 예제 모음: https:/...">
+
+    <meta property="al:ios:app_store_id" content="544007664">
+    <meta property="al:ios:app_name" content="YouTube">
+      <meta property="al:ios:url" content="vnd.youtube://www.youtube.com/watch?v=9VckXVoJEe0&amp;feature=applinks">
+
+      <meta property="al:android:url" content="vnd.youtube://www.youtube.com/watch?v=9VckXVoJEe0&amp;feature=applinks">
+    <meta property="al:android:app_name" content="YouTube">
+    <meta property="al:android:package" content="com.google.android.youtube">
+    <meta property="al:web:url" content="https://www.youtube.com/watch?v=9VckXVoJEe0&amp;feature=applinks">
+
+    <meta property="og:type" content="video">
+        <meta property="og:video:url" content="https://www.youtube.com/embed/9VckXVoJEe0">
+        <meta property="og:video:secure_url" content="https://www.youtube.com/embed/9VckXVoJEe0">
+        <meta property="og:video:type" content="text/html">
+        <meta property="og:video:width" content="960">
+        <meta property="og:video:height" content="720">
+        <meta property="og:video:url" content="http://www.youtube.com/v/9VckXVoJEe0?version=3&amp;autohide=1">
+        <meta property="og:video:secure_url" content="https://www.youtube.com/v/9VckXVoJEe0?version=3&amp;autohide=1">
+        <meta property="og:video:type" content="application/x-shockwave-flash">
+        <meta property="og:video:width" content="960">
+        <meta property="og:video:height" content="720">
+
+        <meta property="og:video:tag" content="TensorFlow">
+        <meta property="og:video:tag" content="AWS">
+
+    <meta property="fb:app_id" content="87741124305">
+
+        <meta name="twitter:card" content="player">
+    <meta name="twitter:site" content="@youtube">
+    <meta name="twitter:url" content="https://www.youtube.com/watch?v=9VckXVoJEe0">
+    <meta name="twitter:title" content="lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자">
+    <meta name="twitter:description" content="GPU에서 Tensorflow를 실행하기 위한 인스턴스 만들기와 설정을 살펴봅니다. 수업페이지; http://hunkim.github.io/ml/ TensorFlow KR: https://www.facebook.com/groups/TensorFlowKR/ 예제 모음: https:/...">
+    <meta name="twitter:image" content="https://i.ytimg.com/vi/9VckXVoJEe0/maxresdefault.jpg">
+    <meta name="twitter:app:name:iphone" content="YouTube">
+    <meta name="twitter:app:id:iphone" content="544007664">
+    <meta name="twitter:app:name:ipad" content="YouTube">
+    <meta name="twitter:app:id:ipad" content="544007664">
+      <meta name="twitter:app:url:iphone" content="vnd.youtube://www.youtube.com/watch?v=9VckXVoJEe0&amp;feature=applinks">
+      <meta name="twitter:app:url:ipad" content="vnd.youtube://www.youtube.com/watch?v=9VckXVoJEe0&amp;feature=applinks">
+    <meta name="twitter:app:name:googleplay" content="YouTube">
+    <meta name="twitter:app:id:googleplay" content="com.google.android.youtube">
+    <meta name="twitter:app:url:googleplay" content="https://www.youtube.com/watch?v=9VckXVoJEe0">
+      <meta name="twitter:player" content="https://www.youtube.com/embed/9VckXVoJEe0">
+      <meta name="twitter:player:width" content="960">
+      <meta name="twitter:player:height" content="720">
+
+  
+        <link rel="stylesheet" href="//s.ytimg.com/yts/cssbin/www-watch-transcript-webp-vflp9_n_i.css" name="www-watch-transcript">
+
+<style>.live-chat-widget .is-expanded .comments-textarea-label { display: none; }</style></head>  <body dir="ltr" id="body" class="  ltr  webkit webkit-537  exp-responsive exp-scrollable-guide   site-center-aligned site-as-giant-card appbar-hidden    visibility-logging-enabled   not-nirvana-dogfood  not-yt-legacy-css    flex-width-enabled      flex-width-enabled-snap    delayed-frame-styles-not-in    yt-user-logged-in  " data-spf-name="watch">
+<div id="early-body"></div><div id="body-container"><div id="a11y-announcements-container" role="alert"><div id="a11y-announcements-message"></div></div><form name="logoutForm" method="POST" action="/logout"><input type="hidden" name="action_logout" value="1"></form><div id="masthead-positioner">      <div id="sb-wrapper">
+    <div id="sb-container" class="sb-card sb-off">
+      <div class="sb-card-arrow"></div>
+      <div class="sb-card-border">
+        <div class="sb-card-body-arrow"></div>
+        <div class="sb-card-content" id="sb-target"></div>
+      </div>
+    </div>
+    <div id="sb-onepick-target" class="sb-off"></div>
+  </div>
+
+    
+  <div id="yt-masthead-container" class="clearfix yt-base-gutter">  <button id="a11y-skip-nav" class="skip-nav" data-target-id="main" tabindex="3">
+탐색 건너뛰기
+  </button>
+<div id="yt-masthead"><div class="yt-masthead-logo-container ">  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text yt-uix-button-empty yt-uix-button-has-icon appbar-guide-toggle appbar-guide-clickable-ancestor" type="button" onclick=";return false;" id="appbar-guide-button" aria-controls="appbar-guide-menu" aria-label="가이드"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-appbar-guide yt-sprite"></span></span></button>
+  <div id="appbar-main-guide-notification-container"></div>
+<span id="yt-masthead-logo-fragment"><a href="/" class="yt-uix-sessionlink masthead-logo-renderer       spf-link " data-sessionlink="itct=CAUQsV4iEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" id="logo-container" title="YouTube 홈">  <span class="logo masthead-logo-renderer-logo yt-sprite" title="YouTube 홈"></span>
+<span class="content-region">KR</span></a></span></div><div id="yt-masthead-user" class="yt-uix-clickcard"><a href="//www.youtube.com/upload" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA&amp;feature=mhsb" id="upload-btn" data-upsell="upload"><span class="yt-uix-button-content">업로드</span></a>
+    <div class="notifications-container "><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon sb-notif-off yt-uix-gen204" type="button" onclick=";return false;" id="sb-button-notify" aria-haspopup="true" aria-label="알림" data-gen204="bell=jingled"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-bell yt-sprite"></span></span><span class="yt-uix-button-content"> </span></button></div>
+    <span id="yt-masthead-account-picker" class="yt-uix-clickcard" data-card-action="yt.www.masthead.handleAccountPickerClick" data-card-class="yt-masthead-account-picker-card">
+    <button class="yt-uix-button yt-uix-button-size-default yt-masthead-user-icon yt-uix-clickcard-target" type="button" onclick=";return false;" aria-haspopup="true" aria-label="대체 계정 목록을 여는 계정 프로필 사진" data-force-position="true" data-orientation="vertical" data-position="bottomleft" data-position-fixed="true"><span class="yt-uix-button-content">  <span class="video-thumb  yt-thumb yt-thumb-27"
+    >
+    <span class="yt-thumb-square">
+      <span class="yt-thumb-clip">
+          <img src="https://yt3.ggpht.com/-Ym-ciD8pti8/AAAAAAAAAAI/AAAAAAAAAAA/1j7aneNUPd8/s88-c-k-no-rj-c0xffffff/photo.jpg" height="27" aria-hidden="true" alt="" width="27" >
+
+        <span class="vertical-align"></span>
+      </span>
+    </span>
+  </span>
+</span></button>
+
+      <div class="yt-masthead-account-picker yt-uix-clickcard-content">
+
+
+
+    <a class="yt-masthead-picker-header yt-masthead-picker-active-account" href="https://www.google.co.kr/settings/u/0/personalinfo">
+      leesnhyun@gmail.com
+    </a>
+
+    <div id="yt-unlimited-member"></div>
+
+    <div class="yt-masthead-picker-body">
+        <a class="yt-masthead-picker-photo-wrapper" href="https://aboutme.google.com/u/0#profile_photo">  <span class="video-thumb  yt-thumb yt-thumb-64"
+    >
+    <span class="yt-thumb-square">
+      <span class="yt-thumb-clip">
+          <img src="https://yt3.ggpht.com/-Ym-ciD8pti8/AAAAAAAAAAI/AAAAAAAAAAA/1j7aneNUPd8/s88-c-k-no-rj-c0xffffff/photo.jpg" height="64" aria-hidden="true" alt="" width="64" >
+
+        <span class="vertical-align"></span>
+      </span>
+    </span>
+  </span>
+<span class="yt-masthead-picker-photo-change">변경</span></a><div class="yt-masthead-picker-info"><div class="yt-masthead-picker-name" dir="ltr">Seng-Hyun Lee</div><div class="yt-masthead-picker-account-subtitle" id="yt-subscriber-count">&#8203;</div><a href="/dashboard?o=U" class="yt-uix-button  yt-masthead-picker-button yt-masthead-picker-button-primary yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA"><span class="yt-uix-button-content">크리에이터 스튜디오</span></a><a href="/account" class="yt-uix-button  yt-masthead-picker-button yt-masthead-picker-settings-button yt-uix-tooltip yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default yt-uix-button-has-icon yt-uix-tooltip yt-uix-button-empty" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA" title="YouTube 설정"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-icon-account-settings yt-sprite"></span></span></a></div>
+    </div>
+
+        <div id="yt-masthead-multilogin" class="yt-masthead-multilogin-users">
+      <div id="yt-delegate-accounts"></div>
+
+    </div>
+
+
+    <div id="yt-channel-switcher-link" class="clearfix"></div>
+
+    <div class="yt-masthead-picker-footer clearfix">
+          <a href="https://accounts.google.com/AddSession?service=youtube&amp;uilel=0&amp;hl=en&amp;continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Fhl%3Den%26action_handle_signin%3Dtrue%26next%3D%252Fwatch%253Fv%253D9VckXVoJEe0%2526feature%253Dyoutu.be%26app%3Ddesktop&amp;passive=false" class="yt-uix-button  yt-masthead-picker-button yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA"><span class="yt-uix-button-content">계정 추가</span></a>
+
+  <a href="/logout" class="yt-uix-button  yt-masthead-picker-button yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA"><span class="yt-uix-button-content">로그아웃</span></a>
+
+    </div>
+  </div>
+
+  </span>
+
+</div><div id="yt-masthead-content"><form id="masthead-search" class="  search-form consolidated-form  vve-check" action="/results" onsubmit="if (document.getElementById(&#39;masthead-search-term&#39;).value == &#39;&#39;) return false;" data-clicktracking="CAIQ7VAiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" data-visibility-tracking="CAIQ7VAiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default search-btn-component search-button" type="submit" onclick="if (document.getElementById(&#39;masthead-search-term&#39;).value == &#39;&#39;) return false; document.getElementById(&#39;masthead-search&#39;).submit(); return false;;return true;" id="search-btn" tabindex="2" dir="ltr"><span class="yt-uix-button-content">검색</span></button><div id="masthead-search-terms" class="masthead-search-terms-border" dir="ltr"><input id="masthead-search-term" autocomplete="off"  onkeydown="if (!this.value &amp;&amp; (event.keyCode == 40 || event.keyCode == 32 || event.keyCode == 34)) {this.onkeydown = null; this.blur();}" class="search-term masthead-search-renderer-input yt-uix-form-input-bidi" name="search_query" value="" type="text" tabindex="1" placeholder="검색" title="검색" aria-label="검색"></div></form></div></div></div>
+    <div id="masthead-appbar-container" class="clearfix"><div id="masthead-appbar"><div id="appbar-content" class=""></div></div></div>
+
+</div><div id="masthead-positioner-height-offset"></div><div id="page-container"><div id="page" class="  watch        video-9VckXVoJEe0 clearfix"><div id="guide" class="yt-scrollbar">    <div id="appbar-guide-menu" class="appbar-menu appbar-guide-menu-layout appbar-guide-clickable-ancestor">
+    <div id="guide-container">
+      <div class="guide-module-content guide-module-loading">
+          <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+      </div>
+    </div>
+  </div>
+
+</div><div class="alerts-wrapper"><div id="alerts" class="content-alignment">    
+  <div id="editor-progress-alert-container"></div>
+  <div class="yt-alert yt-alert-default yt-alert-warn hid " id="editor-progress-alert-template">  <div class="yt-alert-icon">
+    <span class="icon master-sprite yt-sprite"></span>
+  </div>
+<div class="yt-alert-content" role="alert"></div><div class="yt-alert-buttons"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-close close yt-uix-close" type="button" onclick=";return false;" aria-label="닫기" data-close-parent-class="yt-alert"><span class="yt-uix-button-content">닫기</span></button></div></div>
+
+    <div id="edit-confirmation-alert"></div>
+  <div class="yt-alert yt-alert-actionable yt-alert-info hid " id="edit-confirmation-alert-template">  <div class="yt-alert-icon">
+    <span class="icon master-sprite yt-sprite"></span>
+  </div>
+<div class="yt-alert-content" role="alert">    <div class="yt-alert-message">
+    </div>
+</div><div class="yt-alert-buttons">  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-alert-info yt-uix-button-has-icon edit-confirmation-yes" type="button" onclick=";return false;"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-like-invert yt-sprite"></span></span><span class="yt-uix-button-content">예. 저장하겠습니다.</span></button>
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-alert-info yt-uix-button-has-icon edit-confirmation-no" type="button" onclick=";return false;"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-unlike-invert yt-sprite"></span></span><span class="yt-uix-button-content">실행취소</span></button>
+<button class="yt-uix-button yt-uix-button-size-default yt-uix-button-close close yt-uix-close" type="button" onclick=";return false;" aria-label="닫기" data-close-parent-class="yt-alert"><span class="yt-uix-button-content">닫기</span></button></div></div>
+
+
+
+</div></div><div id="header"></div><div id="player" class="  content-alignment       watch-small  " role="complementary"><div id="theater-background" class="player-height"></div>  <div id="player-mole-container">
+    <div id="player-unavailable" class="    hid    player-width player-height    player-unavailable ">
+              <img class="icon meh" src="//s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" data-icon="//s.ytimg.com/yts/img/meh7-vflGevej7.png" alt="">
+  <div class="content">
+    <h1 id="unavailable-message" class="message">
+              사용할 수 없는 동영상입니다.
+
+    </h1>
+    <div id="unavailable-submessage" class="submessage">
+    </div>
+  </div>
+
+
+    </div>
+
+    <div id="player-api" class="player-width player-height off-screen-target player-api" tabIndex="-1"></div>
+        <script>if (window.ytcsi) {window.ytcsi.tick("cfg", null, '');}</script>
+    <script>var ytplayer = ytplayer || {};ytplayer.config = {"assets":{"css":"\/\/s.ytimg.com\/yts\/cssbin\/www-player-webp-vflOl5Xgc.css","js":"\/\/s.ytimg.com\/yts\/jsbin\/player-ko_KR-vfl58qrCG\/base.js"},"min_version":"8.0.0","sts":16976,"html5":true,"messages":{"player_fallback":["동영상을 재생하려면 Adobe Flash Player 또는 HTML5 지원 브라우저가 필요합니다. \u003ca href=\"https:\/\/get.adobe.com\/flashplayer\/\"\u003e최신 Flash Player 다운로드\u003c\/a\u003e \u003ca href=\"\/html5\"\u003eHTML5 브라우저로 업그레이드하는 방법 자세히 알아보기\u003c\/a\u003e"]},"url_v9as2":"","url_v8":"https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflx8Am1d\/cps.swf","params":{"allowfullscreen":"true","allowscriptaccess":"always","bgcolor":"#000000"},"attrs":{"id":"movie_player"},"args":{"timestamp":"1467315805","watch_xlb":"https:\/\/s.ytimg.com\/yts\/xlbbin\/watch-strings-ko_KR-vflAwjHyg.xlb","loudness":"-41.2490005493","referrer":"http:\/\/hunkim.github.io\/ml\/","title":"lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자","enablecsi":"1","apiary_host_firstparty":"","csi_page_type":"watch,watch7_html5","caption_tracks":"v=a.ko\u0026t=1\u0026u=https%3A%2F%2Fwww.youtube.com%2Fapi%2Ftimedtext%3Fexpire%3D1467341005%26caps%3Dasr%26v%3D9VckXVoJEe0%26hl%3Dko_KR%26sparams%3Dasr_langs%252Ccaps%252Cv%252Cexpire%26asr_langs%3Dru%252Ces%252Cko%252Cit%252Cpt%252Cde%252Cfr%252Cja%252Cnl%252Cen%26signature%3D42BAB1A064AB2B3A97B300747A5AC12B30DFC774.F1A827A80BDC6B75CC9280D2D01FADD49DF40D65%26key%3Dyttt1%26kind%3Dasr%26lang%3Dko\u0026n=%ED%95%9C%EA%B5%AD%EC%96%B4+%28%EC%9E%90%EB%8F%99+%EC%83%9D%EC%84%B1%EB%90%A8%29\u0026k=asr\u0026lc=ko","c":"WEB","caption_audio_tracks":"v=0\u0026i=0","allow_ratings":"1","ptk":"youtube_none","cosver":"10.0","feature":"youtu.be","storyboard_spec":"https:\/\/i9.ytimg.com\/sb\/9VckXVoJEe0\/storyboard3_L$L\/$N.jpg|48#27#100#10#10#0#default#KxvOYgXw1MslhqdIK2NuFu1JaPw|72#45#111#10#10#10000#M$M#7Uzm2cE2OFLLZzSAusddIHvIRz8|144#90#111#5#5#10000#M$M#GDOcdxRoDOoMNMIv0JmREazCekQ","iurlsd_webp":"https:\/\/i.ytimg.com\/vi_webp\/9VckXVoJEe0\/sddefault.webp","probe_url":"https:\/\/r17---sn-qxo7sn7e.googlevideo.com\/videogoodput?id=o-AIDraOxuIgkIZ9bxXgKbk4waeUSKoYotwj-vGYSOA727\u0026source=goodput\u0026range=0-4999\u0026expire=1467319405\u0026ip=125.128.223.83\u0026ms=pm\u0026mm=35\u0026pl=24\u0026nh=IgpwcjAxLmRlbjAyKgkxMjcuMC4wLjE\u0026sparams=id,source,range,expire,ip,ms,mm,pl,nh\u0026signature=67B0AD0C45FD7E7260D812A2BA7544255E5411F6.0204BB93BEAFDBF5EA2FF846B9E5FBC27BE9A257\u0026key=cms1","show_pyv_in_related":true,"iurlmq":"https:\/\/i.ytimg.com\/vi\/9VckXVoJEe0\/hqdefault.jpg?custom=true\u0026w=320\u0026h=180\u0026stc=true\u0026jpg444=true\u0026jpgq=90\u0026sp=68\u0026sigh=hhLmEGVZyXCV_b75iOMIYM0GhOg","cver":"1.20160628","url_encoded_fmt_stream_map":"type=video%2Fmp4%3B+codecs%3D%22avc1.64001F%2C+mp4a.40.2%22\u0026itag=22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dcnr%252Cdur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26ipbits%3D0%26ratebypass%3Dyes%26requiressl%3Dyes%26dur%3D1092.382%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D22%26signature%3D320E7EBC1ADDDA66E2C7E084DC129951A6DFA894.0539929888F223ABF259B7DA751A3392E05FEAA3%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26cnr%3D14%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466055026094813%26mm%3D31\u0026quality=hd720,type=video%2Fwebm%3B+codecs%3D%22vp8.0%2C+vorbis%22\u0026itag=43\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26ipbits%3D0%26ratebypass%3Dyes%26requiressl%3Dyes%26dur%3D0.000%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D43%26signature%3DA9A137056870678B451D44C571EF74A88CF228.9D9967118A4117CB245FAD37D857F9E7D4D0C18C%26mm%3D31%26mn%3Dsn-3u-bh2ed%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962231963612%26key%3Dyt6\u0026quality=medium,type=video%2Fmp4%3B+codecs%3D%22avc1.42001E%2C+mp4a.40.2%22\u0026itag=18\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Cratebypass%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26ipbits%3D0%26ratebypass%3Dyes%26requiressl%3Dyes%26dur%3D1092.382%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D18%26signature%3D4DCE25C435770BFB8A352312544C668678407C8C.657CBF702CC7FAFE1BAF4988316F2367F3A531FF%26mm%3D31%26mn%3Dsn-3u-bh2ed%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054549165478%26key%3Dyt6\u0026quality=medium,type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22\u0026itag=36\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fdur%3D1092.452%26pl%3D19%26sver%3D3%26mt%3D1467315549%26ms%3Dau%26source%3Dyoutube%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26initcwndbps%3D3470000%26itag%3D36%26signature%3D973E45CAC677DC4F6426C342C9D3BAC320EA2411.8C766BCA4A75CD6A8D353162A5D648C36E904EC2%26mm%3D31%26mn%3Dsn-3u-bh2ed%26upn%3DcJrHVp-E49M%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26mime%3Dvideo%252F3gpp%26expire%3D1467337405%26ipbits%3D0%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26requiressl%3Dyes%26lmt%3D1465960787054589%26key%3Dyt6\u0026quality=small,type=video%2F3gpp%3B+codecs%3D%22mp4v.20.3%2C+mp4a.40.2%22\u0026itag=17\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fdur%3D1092.452%26pl%3D19%26sver%3D3%26mt%3D1467315549%26ms%3Dau%26source%3Dyoutube%26sparams%3Ddur%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26mv%3Dm%26initcwndbps%3D3470000%26itag%3D17%26signature%3DC0123B308929C0E765E9F73CF05E1893A04D4AAE.D042AEB5F1D06B4569A5B0B50188A245C91CC72A%26mm%3D31%26mn%3Dsn-3u-bh2ed%26upn%3DcJrHVp-E49M%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26mime%3Dvideo%252F3gpp%26expire%3D1467337405%26ipbits%3D0%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26requiressl%3Dyes%26lmt%3D1465960770726645%26key%3Dyt6\u0026quality=small","ismb":"27760000","cbr":"Chrome","sdetail":"f:youtu.be,p:hunkim.github.io\/ml","videostats_playback_base_url":"https:\/\/s.youtube.com\/api\/stats\/playback?referrer=http%3A%2F%2Fhunkim.github.io%2Fml%2F\u0026plid=AAU2hBVgIo2NRLWy\u0026sdetail=f%3Ayoutu.be%2Cp%3Ahunkim.github.io%2Fml\u0026feature=youtu.be\u0026uga=m\u0026sourceid=r\u0026of=Erj_lmf8RnhO3anRIxpOeA\u0026fexp=9405964%2C9406852%2C9416126%2C9416891%2C9419451%2C9420112%2C9422596%2C9426977%2C9428398%2C9431012%2C9433096%2C9433380%2C9433946%2C9434922%2C9435526%2C9435729%2C9435876%2C9436607%2C9437066%2C9437081%2C9437087%2C9437553%2C9437673%2C9438662%2C9438965%2C9439384%2C9439652%2C9440149%2C9440182\u0026vm=CAEQAA\u0026len=1093\u0026cl=126064855\u0026ei=XXZ1V8_pJYOU4gLxgKGwDA\u0026ns=yt\u0026el=detailpage\u0026docid=9VckXVoJEe0","cbrver":"51.0.2704.103","subtitles_xlb":"https:\/\/s.ytimg.com\/yts\/xlbbin\/subtitles-strings-ko_KR-vfliywS4v.xlb","video_id":"9VckXVoJEe0","of":"Erj_lmf8RnhO3anRIxpOeA","fexp":"9405964,9406852,9416126,9416891,9419451,9420112,9422596,9426977,9428398,9431012,9433096,9433380,9433946,9434922,9435526,9435729,9435876,9436607,9437066,9437081,9437087,9437553,9437673,9438662,9438965,9439384,9439652,9440149,9440182","author":"Sung Kim","user_display_image":"https:\/\/yt3.ggpht.com\/-Ym-ciD8pti8\/AAAAAAAAAAI\/AAAAAAAAAAA\/1j7aneNUPd8\/s28-c-k-no-rj-c0xffffff\/photo.jpg","eventid":"XXZ1V8_pJYOU4gLxgKGwDA","default_audio_track_index":"0","cr":"KR","token":"1","account_playback_token":"QUFFLUhqa0wwT0dCdFBtOWVRdVRlSWlzaFNsS2E2ODZ5UXxBQ3Jtc0tuVEwyOVZCMVNSTjc0V204ZmZTYXNxZE1ZZld3eExZRGQxV3ZVcDlxbDBHX0xJNlp3VHBLVl9QeV8yVElBMjJhNERZVUUwV2l3YTNQOEhCeHJtRU11SzBJaTljcHM0MHh4dGdUYzQ2d1puVU5nbXE1Yw==","keywords":"TensorFlow,AWS","vm":"CAEQAA","cl":"126064855","fmt_list":"22\/1152x720\/9\/0\/115,43\/640x360\/99\/0\/0,18\/576x360\/9\/0\/115,36\/320x200\/99\/1\/0,17\/176x144\/99\/1\/0","thumbnail_url":"https:\/\/i.ytimg.com\/vi\/9VckXVoJEe0\/default.jpg","iurlmaxres_webp":"https:\/\/i.ytimg.com\/vi_webp\/9VckXVoJEe0\/maxresdefault.webp","ssl":"1","watermark":",https:\/\/s.ytimg.com\/yts\/img\/watermark\/youtube_watermark-vflHX6b6E.png,https:\/\/s.ytimg.com\/yts\/img\/watermark\/youtube_hd_watermark-vflAzLcD6.png","allow_embed":"1","avg_rating":"5.0","t":"1","watch_ajax_token":"QUFFLUhqbkpDZXhQQjVwdnpGc0JMUF9fMnBiM1FYZFhvd3xBQ3Jtc0tubnZaZ1ZfYTI0LWhDUk1FR2daeXhuWUlnWmRER1ZKZW54Nm5DNjNERmFmS1VFTU9XOVRZS1h3WVRPaXpjYUlUSlF6T3FxaFNPWjRJSF9maG5VUDNVNWN0NEw2ZVJzMEJOczVQVFRCZC05VENxRjBfNA==","cos":"Windows","player_error_log_fraction":"1.0","ldpj":"-26","no_get_video_log":"1","pltype":"contentugc","vmap":"\u003c?xml version=\"1.0\" encoding=\"UTF-8\"?\u003e\u003cvmap:VMAP xmlns:vmap=\"http:\/\/www.iab.net\/videosuite\/vmap\" xmlns:yt=\"http:\/\/youtube.com\" version=\"1.0\"\u003e\u003c\/vmap:VMAP\u003e","plid":"AAU2hBVgIo2NRLWy","enablejsapi":"1","gapi_hint_params":"m;\/_\/scs\/abc-static\/_\/js\/k=gapi.gapi.en.PQWOXwGAyXQ.O\/m=__features__\/rt=j\/d=1\/rs=AHpOoo-SsKefX_tnkYaztI7tux9JZAkUgw","hl":"ko_KR","pyv_ad_channel":"","view_count":"829","fflags":"html5_throttle_rate=0.0\u0026kids_enable_brazil_lp=true\u0026gaming_mweb=true\u0026html5_auto_format_cap_on_battery=0\u0026enable_yt_music_lp=true\u0026html5_background_cap_idle_secs=0\u0026enable_offer_restricts_for_watch_page_offers=true\u0026sidebar_renderers=true\u0026html5_tight_max_buffer_allowed_impaired_time=0.0\u0026native_controls_assume_media_volume=true\u0026legacy_poster_behavior=true\u0026feeds_on_innertube=true\u0026fix_backfill_mpu_api_stats_ads=true\u0026high_res_timestamps=true\u0026html5_multicam=true\u0026html5_tight_max_buffer_allowed_bandwidth_stddevs=0.0\u0026gaming_i18n=true\u0026launch_new_wallet_api=true\u0026dynamic_ad_break_pause_threshold_sec=0\u0026kids_i18n_countries=element:'AR', element:'AU', element:'BR', element:'CA', element:'CO', element:'GB', element:'IE', element:'MX', element:'NZ', element:'US'\u0026use_new_style=true\u0026html5_background_quality_cap=0\u0026fix_vmap_afc_mpu_api_stats_ads=true\u0026html5_strip_emsg=true\u0026firefox_eme=true\u0026yto_feature_hub_channel=false\u0026chrome_promo_enabled=true\u0026enable_get_offers_for_item_list_for_get_cart=true\u0026disable_new_pause_state3=true\u0026log_it_display_tree=true\u0026html5_check_for_reseek=true\u0026yto_enable_unlimited_landing_page_yto_features=true\u0026html5_playing_event_buffer_underrun=true\u0026kids_enable_latam_lp=true\u0026tv_player_heartbeats=true\u0026yto_enable_watch_offer_module=true\u0026legacy_autoplay_flag=true\u0026use_survey_length_15s=true\u0026legacy_cast2=true\u0026yto_enable_ytr_promo_refresh_assets=true\u0026video_metadata_provider_with_query_id=true\u0026html5_ignore_first_0_timeupdate=true\u0026cameo_live_chunk_readahead=3\u0026mpu_visible_threshold_count=4\u0026html5_reseek_on_infinite_buffer=true\u0026html5_live_disable_dg_pacing=true\u0026yt_unlimited_pts_skip_ads_promo_desktop_always=true\u0026enable_mweb_ypc_promotion_renderer=true\u0026flex_theater_mode=true\u0026hide_progress_bar=true\u0026html5_request_sizing_multiplier=0.8\u0026html5_allowable_liveness_drift_chunks=2\u0026html5_bandwidth_window_size=0\u0026html5_deadzone_multiplier=1.0\u0026dynamic_ad_break_seek_threshold_sec=0\u0026html5_max_buffer_health_for_downgrade=0\u0026enable_mrm_channel_approve=true\u0026kids_enable_columbia_lp=true\u0026cards_drawer_auto_open_offset=0\u0026disable_monetization_on_indisplay_playbacks=true\u0026yt_unlimited_special_offers_offer_ids=element:'unlimited.P.1462582356814744',element:'unlimited.P.1462582568961775',element:'unlimited.P.1462582932821829',element:'unlimited.P.1462583256800336',element:'unlimited.P.1462583542437412',element:'unlimited.P.1462583711646004',element:'unlimited.P.1462838921272750'\u0026generate_shopping_companions_on_desktop=true\u0026html5_idle_preload_secs=0\u0026html5_dash_mpd_version=4\u0026beacon_abandoned_only=true\u0026dash_html5_timeouts_before_metadata=true\u0026cards_drawer_auto_open_duration=-1\u0026html5_max_buffer_duration=0\u0026fast_autonav_in_background=true\u0026enable_audio_cast=true\u0026live_chunk_readahead=3","tmi":"1","iurlhq_webp":"https:\/\/i.ytimg.com\/vi_webp\/9VckXVoJEe0\/hqdefault.webp","caption_translation_languages":"lc=gl\u0026n=%EA%B0%88%EB%A6%AC%EC%8B%9C%EC%95%84%EC%96%B4,lc=gu\u0026n=%EA%B5%AC%EC%9E%90%EB%9D%BC%ED%8A%B8%EC%96%B4,lc=el\u0026n=%EA%B7%B8%EB%A6%AC%EC%8A%A4%EC%96%B4,lc=nl\u0026n=%EB%84%A4%EB%8D%9C%EB%9E%80%EB%93%9C%EC%96%B4,lc=ne\u0026n=%EB%84%A4%ED%8C%94%EC%96%B4,lc=no\u0026n=%EB%85%B8%EB%A5%B4%EC%9B%A8%EC%9D%B4%EC%96%B4,lc=ny\u0026n=%EB%8B%88%EC%95%88%EC%9E%90%EC%96%B4%3B+%EC%B9%98%EC%B8%84%EC%96%B4%3B+%EC%B8%84%EC%96%B4,lc=da\u0026n=%EB%8D%B4%EB%A7%88%ED%81%AC%EC%96%B4,lc=de\u0026n=%EB%8F%85%EC%9D%BC%EC%96%B4,lc=lo\u0026n=%EB%9D%BC%EC%98%A4%EC%96%B4,lc=lv\u0026n=%EB%9D%BC%ED%8A%B8%EB%B9%84%EC%95%84%EC%96%B4,lc=la\u0026n=%EB%9D%BC%ED%8B%B4%EC%96%B4,lc=ru\u0026n=%EB%9F%AC%EC%8B%9C%EC%95%84%EC%96%B4,lc=ro\u0026n=%EB%A3%A8%EB%A7%88%EB%8B%88%EC%95%84%EC%96%B4,lc=lb\u0026n=%EB%A3%A9%EC%85%88%EB%B6%80%EB%A5%B4%ED%81%AC%EC%96%B4,lc=lt\u0026n=%EB%A6%AC%ED%88%AC%EC%95%84%EB%8B%88%EC%95%84%EC%96%B4,lc=mr\u0026n=%EB%A7%88%EB%9D%BC%ED%8B%B0%EC%96%B4,lc=mi\u0026n=%EB%A7%88%EC%98%A4%EB%A6%AC%EC%96%B4,lc=mk\u0026n=%EB%A7%88%EC%BC%80%EB%8F%84%EB%8B%88%EC%95%84%EC%96%B4,lc=mg\u0026n=%EB%A7%90%EB%9D%BC%EA%B0%80%EC%8B%9C%EC%96%B4,lc=ml\u0026n=%EB%A7%90%EB%9D%BC%EC%96%84%EB%9E%8C%EC%96%B4,lc=ms\u0026n=%EB%A7%90%EB%A0%88%EC%9D%B4%EC%96%B4,lc=mt\u0026n=%EB%AA%B0%ED%83%80%EC%96%B4,lc=mn\u0026n=%EB%AA%BD%EA%B3%A0%EC%96%B4,lc=eu\u0026n=%EB%B0%94%EC%8A%A4%ED%81%AC%EC%96%B4,lc=my\u0026n=%EB%B2%84%EB%A7%88%EC%96%B4,lc=vi\u0026n=%EB%B2%A0%ED%8A%B8%EB%82%A8%EC%96%B4,lc=be\u0026n=%EB%B2%A8%EB%9D%BC%EB%A3%A8%EC%8A%A4%EC%96%B4,lc=bn\u0026n=%EB%B2%B5%EA%B3%A8%EC%96%B4,lc=bs\u0026n=%EB%B3%B4%EC%8A%A4%EB%8B%88%EC%95%84%EC%96%B4,lc=bg\u0026n=%EB%B6%88%EA%B0%80%EB%A6%AC%EC%95%84%EC%96%B4,lc=sm\u0026n=%EC%82%AC%EB%AA%A8%EC%95%84%EC%96%B4,lc=fy\u0026n=%EC%84%9C%ED%94%84%EB%A6%AC%EC%A7%80%EC%95%84%EC%96%B4,lc=sr\u0026n=%EC%84%B8%EB%A5%B4%EB%B9%84%EC%95%84%EC%96%B4,lc=ceb\u0026n=%EC%84%B8%EB%B6%80%EC%95%84%EB%85%B8%EC%96%B4,lc=so\u0026n=%EC%86%8C%EB%A7%90%EB%A6%AC%EC%95%84%EC%96%B4,lc=st\u0026n=%EC%86%8C%ED%86%A0%EC%96%B4+%28%EB%82%A8%EB%B6%80%29,lc=sn\u0026n=%EC%87%BC%EB%82%98%EC%96%B4,lc=su\u0026n=%EC%88%9C%EB%8B%A4%EC%96%B4,lc=si\u0026n=%EC%8A%A4%EB%A6%AC%EB%9E%91%EC%B9%B4%EC%96%B4,lc=sw\u0026n=%EC%8A%A4%EC%99%80%ED%9E%90%EB%A6%AC%EC%96%B4,lc=sv\u0026n=%EC%8A%A4%EC%9B%A8%EB%8D%B4%EC%96%B4,lc=gd\u0026n=%EC%8A%A4%EC%BD%94%ED%8B%80%EB%9E%9C%EB%93%9C+%EA%B2%8C%EC%9D%BC%EC%96%B4,lc=es\u0026n=%EC%8A%A4%ED%8E%98%EC%9D%B8%EC%96%B4,lc=sk\u0026n=%EC%8A%AC%EB%A1%9C%EB%B0%94%ED%82%A4%EC%95%84%EC%96%B4,lc=sl\u0026n=%EC%8A%AC%EB%A1%9C%EB%B2%A0%EB%8B%88%EC%95%84%EC%96%B4,lc=sd\u0026n=%EC%8B%A0%EB%94%94%EC%96%B4,lc=ar\u0026n=%EC%95%84%EB%9E%8D%EC%96%B4,lc=hy\u0026n=%EC%95%84%EB%A5%B4%EB%A9%94%EB%8B%88%EC%95%84%EC%96%B4,lc=is\u0026n=%EC%95%84%EC%9D%B4%EC%8A%AC%EB%9E%80%EB%93%9C%EC%96%B4,lc=ht\u0026n=%EC%95%84%EC%9D%B4%ED%8B%B0%EC%96%B4,lc=ga\u0026n=%EC%95%84%EC%9D%BC%EB%9E%9C%EB%93%9C%EC%96%B4,lc=az\u0026n=%EC%95%84%EC%A0%9C%EB%A5%B4%EB%B0%94%EC%9D%B4%EC%9E%94%EC%96%B4,lc=af\u0026n=%EC%95%84%ED%94%84%EB%A6%AC%EC%B9%B8%EC%8A%A4%EC%96%B4,lc=sq\u0026n=%EC%95%8C%EB%B0%94%EB%8B%88%EC%95%84%EC%96%B4,lc=am\u0026n=%EC%95%94%ED%95%98%EB%9D%BC%EC%96%B4,lc=et\u0026n=%EC%97%90%EC%8A%A4%ED%86%A0%EB%8B%88%EC%95%84%EC%96%B4,lc=eo\u0026n=%EC%97%90%EC%8A%A4%ED%8E%98%EB%9E%80%ED%86%A0%EC%96%B4,lc=en\u0026n=%EC%98%81%EC%96%B4,lc=yo\u0026n=%EC%9A%94%EB%A3%A8%EB%B0%94%EC%96%B4,lc=ur\u0026n=%EC%9A%B0%EB%A5%B4%EB%91%90%EC%96%B4,lc=uz\u0026n=%EC%9A%B0%EC%A6%88%EB%B2%A0%ED%81%AC%EC%96%B4,lc=uk\u0026n=%EC%9A%B0%ED%81%AC%EB%9D%BC%EC%9D%B4%EB%82%98%EC%96%B4,lc=cy\u0026n=%EC%9B%A8%EC%9D%BC%EC%8A%A4%EC%96%B4,lc=ig\u0026n=%EC%9D%B4%EA%B7%B8%EB%B3%B4%EC%96%B4,lc=yi\u0026n=%EC%9D%B4%EB%94%94%EC%8B%9C%EC%96%B4,lc=it\u0026n=%EC%9D%B4%ED%83%88%EB%A6%AC%EC%95%84%EC%96%B4,lc=id\u0026n=%EC%9D%B8%EB%8F%84%EB%84%A4%EC%8B%9C%EC%95%84%EC%96%B4,lc=ja\u0026n=%EC%9D%BC%EB%B3%B8%EC%96%B4,lc=jv\u0026n=%EC%9E%90%EB%B0%94%EC%96%B4,lc=ka\u0026n=%EC%A1%B0%EC%A7%80%EC%95%84%EC%96%B4,lc=zu\u0026n=%EC%A4%84%EB%A3%A8%EC%96%B4,lc=zh-Hans\u0026n=%EC%A4%91%EA%B5%AD%EC%96%B4%28%EA%B0%84%EC%B2%B4%29,lc=zh-Hant\u0026n=%EC%A4%91%EA%B5%AD%EC%96%B4%28%EB%B2%88%EC%B2%B4%29,lc=cs\u0026n=%EC%B2%B4%EC%BD%94%EC%96%B4,lc=kk\u0026n=%EC%B9%B4%EC%9E%90%ED%9D%90%EC%96%B4,lc=ca\u0026n=%EC%B9%B4%ED%83%88%EB%A1%9C%EB%8B%88%EC%95%84%EC%96%B4,lc=kn\u0026n=%EC%B9%B8%EB%82%98%EB%8B%A4%EC%96%B4,lc=km\u0026n=%EC%BA%84%EB%B3%B4%EB%94%94%EC%95%84%EC%96%B4,lc=co\u0026n=%EC%BD%94%EB%A5%B4%EC%8B%9C%EC%B9%B4%EC%96%B4,lc=xh\u0026n=%EC%BD%94%EC%82%AC%EC%96%B4,lc=ku\u0026n=%EC%BF%A0%EB%A5%B4%EB%93%9C%EC%96%B4,lc=hr\u0026n=%ED%81%AC%EB%A1%9C%EC%95%84%ED%8B%B0%EC%95%84%EC%96%B4,lc=ky\u0026n=%ED%82%A4%EB%A5%B4%EA%B8%B0%EC%8A%A4%EC%96%B4,lc=ta\u0026n=%ED%83%80%EB%B0%80%EC%96%B4,lc=tg\u0026n=%ED%83%80%EC%A7%80%ED%81%AC%EC%96%B4,lc=th\u0026n=%ED%83%9C%EA%B5%AD%EC%96%B4,lc=tr\u0026n=%ED%84%B0%ED%82%A4%EC%96%B4,lc=te\u0026n=%ED%85%94%EB%A3%A8%EA%B5%AC%EC%96%B4,lc=ps\u0026n=%ED%8C%8C%EC%8A%88%ED%86%A0%EC%96%B4,lc=pa\u0026n=%ED%8E%80%EC%9E%A1%EC%96%B4,lc=fa\u0026n=%ED%8E%98%EB%A5%B4%EC%8B%9C%EC%95%84%EC%96%B4,lc=pt\u0026n=%ED%8F%AC%EB%A5%B4%ED%88%AC%EA%B0%88%EC%96%B4,lc=pl\u0026n=%ED%8F%B4%EB%9E%80%EB%93%9C%EC%96%B4,lc=fr\u0026n=%ED%94%84%EB%9E%91%EC%8A%A4%EC%96%B4,lc=fi\u0026n=%ED%95%80%EB%9E%80%EB%93%9C%EC%96%B4,lc=fil\u0026n=%ED%95%84%EB%A6%AC%ED%95%80%EC%96%B4,lc=haw\u0026n=%ED%95%98%EC%99%80%EC%9D%B4%EC%96%B4,lc=ha\u0026n=%ED%95%98%EC%9A%B0%EC%82%AC%EC%96%B4,lc=ko\u0026n=%ED%95%9C%EA%B5%AD%EC%96%B4,lc=hu\u0026n=%ED%97%9D%EA%B0%80%EB%A6%AC%EC%96%B4,lc=hmn\u0026n=%ED%9E%88%EB%AA%B8%EC%96%B4,lc=iw\u0026n=%ED%9E%88%EB%B8%8C%EB%A6%AC%EC%96%B4,lc=hi\u0026n=%ED%9E%8C%EB%94%94%EC%96%B4","atc":"a=3\u0026b=QapeZ7RQFzZEaRCKk1H_HszuPXo\u0026c=1467315805\u0026d=1\u0026e=9VckXVoJEe0\u0026c3a=25\u0026c1a=1\u0026c6a=1\u0026hh=TuVw6esaw2E8dy7ggnA6NXYbApY","sourceid":"r","iurl_webp":"https:\/\/i.ytimg.com\/vi_webp\/9VckXVoJEe0\/hqdefault.webp","loaderUrl":"https:\/\/www.youtube.com\/watch?v=9VckXVoJEe0\u0026feature=youtu.be","innertube_api_key":"AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8","is_listed":"1","itct":"CAMQu2kiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0=","ucid":"UCML9R2ol-l0Ab9OXoNnr7Lw","adaptive_fmts":"fps=29\u0026bitrate=1640108\u0026index=714-3277\u0026size=2304x1440\u0026init=0-713\u0026itag=264\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.640032%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D53085182%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.348%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D264%26signature%3DBB3945EA6307DA34EED3CD562DFB68ED8A4AE9D8.229E81772A3FDF2090F8FA680F860D4B6E51964B%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054078043814%26mm%3D31\u0026projection_type=1\u0026clen=53085182\u0026xtags=\u0026lmt=1466054078043814\u0026quality_label=1440p,fps=29\u0026bitrate=2093860\u0026index=243-3958\u0026size=2304x1440\u0026init=0-242\u0026itag=271\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D61222551%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.314%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D271%26signature%3D2099E7659761184E9646CBF6FF9B95F5158341EF.6A99D3A63B5DD467363D5BA121C11BE084031F51%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962641831516%26mm%3D31\u0026projection_type=1\u0026clen=61222551\u0026xtags=\u0026lmt=1465962641831516\u0026quality_label=1440p,fps=59\u0026bitrate=2552921\u0026index=243-3964\u0026size=2304x1440\u0026init=0-242\u0026itag=308\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D70479631%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.313%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D308%26signature%3D1D036FA2DE1AE23CC5B80CE73CBF4EC15A4F5A18.6C467BAF0179E6FB30BAAD1E2167167D5CC57D7D%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962706163214%26mm%3D31\u0026projection_type=1\u0026clen=70479631\u0026xtags=\u0026lmt=1465962706163214\u0026quality_label=1440p60,fps=29\u0026bitrate=1012258\u0026index=715-3278\u0026size=1728x1080\u0026init=0-714\u0026itag=137\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.640028%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D32251922%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.348%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D137%26signature%3D2FAFD2290073B911A4780DEBCEBBE73E1EBBE221.8C41D69AF32390DE0D43B37250963198241764D4%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054076337874%26mm%3D31\u0026projection_type=1\u0026clen=32251922\u0026xtags=\u0026lmt=1466054076337874\u0026quality_label=1080p,fps=29\u0026bitrate=845919\u0026index=243-3910\u0026size=1728x1080\u0026init=0-242\u0026itag=248\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D31428819%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.314%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D248%26signature%3D8A0C34FD02A3083ABBF668E9CE6C711A630DCE5F.DC274F94F140C5FD7681095F7921CBF2110D1AB1%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962515839824%26mm%3D31\u0026projection_type=1\u0026clen=31428819\u0026xtags=\u0026lmt=1465962515839824\u0026quality_label=1080p,fps=59\u0026bitrate=1311795\u0026index=715-3278\u0026size=1728x1080\u0026init=0-714\u0026itag=299\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.64002a%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D41676196%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.331%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D299%26signature%3D16C2AA95DF39DB84EAD219DC51507C67D70BF817.20229D2C4E48DA28ACA60D7538917392C0A79840%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054088381970%26mm%3D31\u0026projection_type=1\u0026clen=41676196\u0026xtags=\u0026lmt=1466054088381970\u0026quality_label=1080p60,fps=59\u0026bitrate=1084353\u0026index=243-3922\u0026size=1728x1080\u0026init=0-242\u0026itag=303\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D34686306%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.313%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D303%26signature%3D771DF15EADE806E9A39BB248FE77BC3B128C6E18.C7D5C26CD4D63678E780C92E51163294FF3F46A8%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962651809931%26mm%3D31\u0026projection_type=1\u0026clen=34686306\u0026xtags=\u0026lmt=1465962651809931\u0026quality_label=1080p60,fps=29\u0026bitrate=645506\u0026index=713-3276\u0026size=1152x720\u0026init=0-712\u0026itag=136\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401f%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D19651853%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.348%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D136%26signature%3DC9F66F38119E042BA29B4EA18F5ED500C9F8FAC7.27C8C2A4807A24C41F14A4B6D404A2C19920670A%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054134798802%26mm%3D31\u0026projection_type=1\u0026clen=19651853\u0026xtags=\u0026lmt=1466054134798802\u0026quality_label=720p,fps=29\u0026bitrate=452691\u0026index=243-3845\u0026size=1152x720\u0026init=0-242\u0026itag=247\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D18379250%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.314%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D247%26signature%3D44720C614DEDE4E483D542BCD3FF65BECC4E5070.8AEDFE236473CC2116DA038781F1A962D55E256B%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962893478004%26mm%3D31\u0026projection_type=1\u0026clen=18379250\u0026xtags=\u0026lmt=1465962893478004\u0026quality_label=720p,fps=59\u0026bitrate=759834\u0026index=713-3276\u0026size=1152x720\u0026init=0-712\u0026itag=298\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d4020%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D24237819%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.331%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D298%26signature%3DBC9B79DF7EFBF1F3A1AB258C661D68A66FAD096B.E393A3E94C5A409EF136E1271255B047DF26CF13%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054073356163%26mm%3D31\u0026projection_type=1\u0026clen=24237819\u0026xtags=\u0026lmt=1466054073356163\u0026quality_label=720p60,fps=59\u0026bitrate=635051\u0026index=243-3871\u0026size=1152x720\u0026init=0-242\u0026itag=302\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D20269095%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.313%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D302%26signature%3D9316428CB260B20E92ECA6C9D62333B448657FAB.BA5D8FF269878C73739493FED131B3A4878A915F%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962447749265%26mm%3D31\u0026projection_type=1\u0026clen=20269095\u0026xtags=\u0026lmt=1465962447749265\u0026quality_label=720p60,fps=29\u0026bitrate=363676\u0026index=713-3276\u0026size=768x480\u0026init=0-712\u0026itag=135\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401f%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D11497630%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.348%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D135%26signature%3D09D256D605C25C22534567739350C16548F26008.DAD87774A0E10FCF89E94B77CA4240B1B3276176%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054134790595%26mm%3D31\u0026projection_type=1\u0026clen=11497630\u0026xtags=\u0026lmt=1466054134790595\u0026quality_label=480p,fps=29\u0026bitrate=251360\u0026index=243-3818\u0026size=768x480\u0026init=0-242\u0026itag=244\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D10661538%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.314%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D244%26signature%3D234BC43E48DC45345518F89A672E3D1F7E755CFB.D9456478A1DD406F6A00FBFC68FC6BAB77394337%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962893261843%26mm%3D31\u0026projection_type=1\u0026clen=10661538\u0026xtags=\u0026lmt=1465962893261843\u0026quality_label=480p,fps=29\u0026bitrate=192403\u0026index=714-3277\u0026size=576x360\u0026init=0-713\u0026itag=134\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d401e%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D7403284%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.348%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D134%26signature%3D24F17AD97D29EA347AF185334CB225DC8AFE4EC6.CB9B507076DA49DDB83A6D46193900C805DA6F07%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054134692196%26mm%3D31\u0026projection_type=1\u0026clen=7403284\u0026xtags=\u0026lmt=1466054134692196\u0026quality_label=360p,fps=29\u0026bitrate=178533\u0026index=243-3818\u0026size=576x360\u0026init=0-242\u0026itag=243\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D7071571%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.314%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D243%26signature%3D93DB37592C6DFCCA34E50E4AF5261BDCF9B7C301.DFF03EEDFB20DFF0E7C7EFDC38BF6E5A086A306D%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962893707996%26mm%3D31\u0026projection_type=1\u0026clen=7071571\u0026xtags=\u0026lmt=1465962893707996\u0026quality_label=360p,fps=29\u0026bitrate=237883\u0026index=712-3275\u0026size=384x240\u0026init=0-711\u0026itag=133\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d400d%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D10218274%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.348%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D133%26signature%3DC324C60B2DADD1EFD7D8B9FB31076DB000EC7A66.A3DC780C12B8C7F10D67776C56402CA4B702380B%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054134591561%26mm%3D31\u0026projection_type=1\u0026clen=10218274\u0026xtags=\u0026lmt=1466054134591561\u0026quality_label=240p,fps=29\u0026bitrate=89187\u0026index=242-3816\u0026size=384x240\u0026init=0-241\u0026itag=242\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D4060094%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.314%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D242%26signature%3D5B14EF35D1E7A12EE9AAB3B31BD196FAB6A5DAC6.9830993A998914A86A2764B63F6FB72E0842F126%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962893128796%26mm%3D31\u0026projection_type=1\u0026clen=4060094\u0026xtags=\u0026lmt=1465962893128796\u0026quality_label=240p,fps=29\u0026bitrate=106471\u0026index=675-3238\u0026size=230x144\u0026init=0-674\u0026itag=160\u0026type=video%2Fmp4%3B+codecs%3D%22avc1.4d400c%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fmp4%26clen%3D6719112%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.348%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D160%26signature%3D67D81CD2AA471F7377161A0A445E3953240B96C9.62A5114B647C7BFC0ACADE9E5F865C7D8D987CD6%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054134491533%26mm%3D31\u0026projection_type=1\u0026clen=6719112\u0026xtags=\u0026lmt=1466054134491533\u0026quality_label=144p,fps=29\u0026bitrate=46035\u0026index=241-3813\u0026size=230x144\u0026init=0-240\u0026itag=278\u0026type=video%2Fwebm%3B+codecs%3D%22vp9%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Dvideo%252Fwebm%26clen%3D2775502%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.314%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D278%26signature%3DBE45973CB492A167D82EF4B2DB6C8AA127C2EF62.D8EB97FFE24BBE893F667B4493BBE3A69964C3AF%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962893133142%26mm%3D31\u0026projection_type=1\u0026clen=2775502\u0026xtags=\u0026lmt=1465962893133142\u0026quality_label=144p,xtags=\u0026itag=140\u0026bitrate=96712\u0026clen=12980842\u0026index=592-1943\u0026lmt=1466054102730044\u0026type=audio%2Fmp4%3B+codecs%3D%22mp4a.40.2%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Daudio%252Fmp4%26clen%3D12980842%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.382%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D140%26signature%3DD570C77F9B5EC3DECAB9103FF99B0ABFACC6C392.1C098CFB521C4F00096D92CBF913C50BE58D84F1%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1466054102730044%26mm%3D31\u0026projection_type=1\u0026init=0-591,xtags=\u0026itag=171\u0026bitrate=82021\u0026clen=10481722\u0026index=4083-5949\u0026lmt=1465962247475844\u0026type=audio%2Fwebm%3B+codecs%3D%22vorbis%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Daudio%252Fwebm%26clen%3D10481722%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.332%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D171%26signature%3D2E1FA8650B64A39BAF4BC0249FDA1729DA70B5BE.0E384DAE0EF01079D2D297D5014ABEEEBCDF714E%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962247475844%26mm%3D31\u0026projection_type=1\u0026init=0-4082,xtags=\u0026itag=249\u0026bitrate=52212\u0026clen=6809598\u0026index=272-2137\u0026lmt=1465962247598021\u0026type=audio%2Fwebm%3B+codecs%3D%22opus%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Daudio%252Fwebm%26clen%3D6809598%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.341%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D249%26signature%3D15A3509BBB5EADEBB593A5035A99B1B436F7FEE1.014908516D7E0DBECC6F978636EA63C9C5A6B61E%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962247598021%26mm%3D31\u0026projection_type=1\u0026init=0-271,xtags=\u0026itag=250\u0026bitrate=68816\u0026clen=8977110\u0026index=272-2138\u0026lmt=1465962248705773\u0026type=audio%2Fwebm%3B+codecs%3D%22opus%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Daudio%252Fwebm%26clen%3D8977110%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.341%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D250%26signature%3D30936434D90F3DCE8735726EFF9EAF9BB653B32D.BD42424ED44C950C6472DB4056B0E911FC5D64C2%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962248705773%26mm%3D31\u0026projection_type=1\u0026init=0-271,xtags=\u0026itag=251\u0026bitrate=104075\u0026clen=13550007\u0026index=272-2138\u0026lmt=1465962248685924\u0026type=audio%2Fwebm%3B+codecs%3D%22opus%22\u0026url=https%3A%2F%2Fr2---sn-3u-bh2ed.googlevideo.com%2Fvideoplayback%3Fpl%3D19%26source%3Dyoutube%26sparams%3Dclen%252Cdur%252Cgir%252Cid%252Cinitcwndbps%252Cip%252Cipbits%252Citag%252Ckeepalive%252Clmt%252Cmime%252Cmm%252Cmn%252Cms%252Cmv%252Cpl%252Crequiressl%252Csource%252Cupn%252Cexpire%26initcwndbps%3D3470000%26keepalive%3Dyes%26upn%3DcJrHVp-E49M%26mime%3Daudio%252Fwebm%26clen%3D13550007%26ipbits%3D0%26requiressl%3Dyes%26dur%3D1092.341%26sver%3D3%26ms%3Dau%26mt%3D1467315549%26mv%3Dm%26itag%3D251%26signature%3DCA882EA9BA062E0F3F059C9C88DB823B3461B2E6.0EC24E08B758BDFDE690E2638A411352647E25B1%26key%3Dyt6%26mn%3Dsn-3u-bh2ed%26gir%3Dyes%26id%3Do-AHGiz1Ktlp-gMc7rNMv9NQ_pXItSShaiMyzerteMFH1b%26expire%3D1467337405%26fexp%3D9405964%252C9406852%252C9416126%252C9416891%252C9419451%252C9420112%252C9422596%252C9426977%252C9428398%252C9431012%252C9433096%252C9433380%252C9433946%252C9434922%252C9435526%252C9435729%252C9435876%252C9436607%252C9437066%252C9437081%252C9437087%252C9437553%252C9437673%252C9438662%252C9438965%252C9439384%252C9439652%252C9440149%252C9440182%26ip%3D125.128.223.83%26lmt%3D1465962248685924%26mm%3D31\u0026projection_type=1\u0026init=0-271","idpj":"-8","user_display_name":"Seng-Hyun Lee","apiary_host":"","authuser":0,"length_seconds":"1092","host_language":"ko","innertube_context_client_version":"1.20160628","user_gender":"m","innertube_api_version":"v1"},"url":"https:\/\/s.ytimg.com\/yts\/swfbin\/player-vflx8Am1d\/watch_as3.swf"};ytplayer.load = function() {yt.player.Application.create("player-api", ytplayer.config);ytplayer.config.loaded = true;};(function() {if (!!window.yt && yt.player && yt.player.Application) {ytplayer.load();}}());</script>
+
+
+    <div id="watch-queue-mole" class="video-mole mole-collapsed hid"><div id="watch-queue" class="watch-playlist player-height"><div class="main-content"><div class="watch-queue-header"><div class="watch-queue-info"><div class="watch-queue-info-icon"><span class="tv-queue-list-icon yt-sprite"></span></div><h3 class="watch-queue-title">동영상 대기열</h3><h3 class="tv-queue-title">대기열</h3><span class="tv-queue-details">사용자: <span class="yt-user-name " dir="ltr">Seng-Hyun Lee</span></span></div><div class="watch-queue-control-bar control-bar-button"><div class="watch-queue-mole-info"><div class="watch-queue-control-bar-icon"><span class="watch-queue-icon yt-sprite"></span></div><div class="watch-queue-title-container"><span class="watch-queue-count"></span><span class="watch-queue-title">동영상 대기열</span><span class="tv-queue-title">대기열</span></div></div>  <span id="watch-queue-save-as-playlist-widget" class="create-playlist-widget-button yt-uix-clickcard" data-click-outside-persists="true" data-dialog-id="watch-queue-save-as-playlist-dialog">
+      <div id="watch-queue-save-as-playlist-dialog" class="create-playlist-widget-dialog hid yt-uix-clickcard-content">
+          <form class="create-playlist-widget-form yt-uix-focustrap" method="POST" action="/playlist_ajax?action_create_playlist=1" data-max-title-length="150">
+    <input class="video-ids-input" type="hidden" name="video_ids">
+    <input class="source-playlist-id-input" type="hidden" name="source_playlist_id">
+    <div class="create-playlist-section">
+      <label>
+        <h2 class="yt-uix-form-label">
+재생목록 제목
+        </h2>
+        <span class="title-input-container yt-uix-form-input-container yt-uix-form-input-text-container  yt-uix-form-input-fluid-container"><span class=" yt-uix-form-input-fluid"><input class="yt-uix-form-input-text title-input" name="n" type="text" maxlength="150"></span></span>
+      </label>
+    </div>
+
+    <div class="create-playlist-section create-playlist-bottom-section clearfix">
+        <input class="privacy-value-input" type="hidden" name="p" value="public">
+  <div class="yt-uix-menu yt-uix-menu-sibling-content privacy-button-container" >  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-text yt-uix-button-has-icon no-icon-markup privacy-button yt-uix-menu-trigger" type="button" onclick=";return false;" aria-haspopup="true" aria-pressed="false" role="button" aria-label="재생목록 개인정보 보호" data-privacy-state="privacy-public"><span class="yt-uix-button-content">공개</span><span class="yt-uix-button-arrow yt-sprite"></span></button>
+<div class="yt-uix-menu-content yt-ui-menu-content yt-uix-menu-content-hidden" role="menu">  <ul class="create-playlist-widget-privacy-menu">
+      <li role="menuitem">
+      <button type="button" class="yt-ui-menu-item has-icon yt-uix-menu-close-on-select yt-uix-button-has-icon no-icon-markup is-selected" title="공개"
+ data-value="public" data-privacy-state="privacy-public">
+    <span class="yt-ui-menu-item-label">공개</span>
+  </button>
+
+  </li>
+
+
+      <li role="menuitem">
+      <button type="button" class="yt-ui-menu-item has-icon yt-uix-menu-close-on-select yt-uix-button-has-icon no-icon-markup" title="미등록"
+ data-value="unlisted" data-privacy-state="privacy-unlisted">
+    <span class="yt-ui-menu-item-label">미등록</span>
+  </button>
+
+  </li>
+
+
+      <li role="menuitem">
+      <button type="button" class="yt-ui-menu-item has-icon yt-uix-menu-close-on-select yt-uix-button-has-icon no-icon-markup" title="비공개"
+ data-value="private" data-privacy-state="privacy-private">
+    <span class="yt-ui-menu-item-label">비공개</span>
+  </button>
+
+  </li>
+
+  </ul>
+</div></div>
+
+        <div class="create-playlist-buttons">
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default cancel-button" type="reset" onclick=";return true;"><span class="yt-uix-button-content">취소</span></button>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-primary create-button" type="submit" onclick=";return true;" disabled="True"><span class="yt-uix-button-content">만들기</span></button>
+    <button class="yt-uix-button-disabled-aria-label" aria-disabled="true" onclick="return false;">만들기</button>
+  </div>
+
+    </div>
+    <div class="yt-uix-focustrap-trap" tabindex="0"></div>
+  </form>
+
+      </div>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon no-icon-markup yt-uix-clickcard-target add-new-pl-btn" type="button" onclick=";return false;" data-orientation="vertical" data-position="bottomright"><span class="yt-uix-button-content">새 재생목록</span></button>
+  </span>
+  <span class="dark-overflow-action-menu">
+      
+    
+    
+    <button class="flip control-bar-button yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty" onclick=";return false;" aria-haspopup="true" aria-expanded="false" type="button" aria-label="대기열에 해당하는 작업" ><span class="yt-uix-button-arrow yt-sprite"></span><ul class="watch-queue-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid" role="menu" aria-haspopup="true"><li role="menuitem"><span class="watch-queue-menu-choice overflow-menu-choice yt-uix-button-menu-item" onclick=";return false;" data-action="save-as-playlist" >재생목록으로 저장</span></li><li role="menuitem"><span class="watch-queue-menu-choice overflow-menu-choice yt-uix-button-menu-item" onclick=";return false;" data-action="remove-all" >전체 삭제</span></li><li role="menuitem"><span class="watch-queue-menu-choice overflow-menu-choice yt-uix-button-menu-item" onclick=";return false;" data-action="disconnect" >연결 해제</span></li></ul></button>
+  </span>
+  <div class="watch-queue-controls">
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button prev-watch-queue-button yt-uix-button-opacity yt-uix-tooltip yt-uix-tooltip" type="button" onclick=";return false;" title="이전 동영상"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-prev yt-sprite"></span></span></button>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button play-watch-queue-button yt-uix-button-opacity yt-uix-tooltip yt-uix-tooltip" type="button" onclick=";return false;" title="재생"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-play yt-sprite"></span></span></button>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button pause-watch-queue-button yt-uix-button-opacity yt-uix-tooltip hid yt-uix-tooltip" type="button" onclick=";return false;" title="일시중지"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-pause yt-sprite"></span></span></button>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-empty yt-uix-button-has-icon control-bar-button next-watch-queue-button yt-uix-button-opacity yt-uix-tooltip yt-uix-tooltip" type="button" onclick=";return false;" title="다음 동영상"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-watch-queue-next yt-sprite"></span></span></button>
+  </div>
+</div></div><div class="watch-queue-items-container yt-scrollbar-dark yt-scrollbar"><ol class="watch-queue-items-list playlist-videos-list yt-uix-scroller" data-scroll-action="yt.www.watchqueue.loadThumbnails">  <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+</ol></div></div>  <div class="hid">
+    <div id="watch-queue-title-msg">
+동영상 대기열
+    </div>
+
+    <div id="tv-queue-title-msg">대기열</div>
+
+    <div id="watch-queue-count-msg">
+전체 __total__개 중 __count__개
+    </div>
+
+    <div id="watch-queue-loading-template">
+      <!--
+          <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+      -->
+    </div>
+  </div>
+</div></div>
+    <div id="player-playlist" class="  content-alignment    watch-player-playlist  ">
+          
+
+    </div>
+
+  </div>
+
+  <div class="clear"></div>
+</div><div id="content" class="  content-alignment" role="main">      <div id="placeholder-player">
+    <div class="player-api player-width player-height"></div>
+  </div>
+
+  <div id="watch7-container" class="">
+      <div id="player-messages">
+  </div>
+    
+  <div id="watch7-main-container">
+    <div id="watch7-main" class="clearfix">
+      <div id="watch7-preview" class="player-width player-height hid">
+      </div>
+      <div id="watch7-content" class="watch-main-col " itemscope itemid="" itemtype="http://schema.org/VideoObject"
+      >
+            <link itemprop="url" href="https://www.youtube.com/watch?v=9VckXVoJEe0">
+    <meta itemprop="name" content="lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자">
+    <meta itemprop="description" content="GPU에서 Tensorflow를 실행하기 위한 인스턴스 만들기와 설정을 살펴봅니다. 수업페이지; http://hunkim.github.io/ml/ TensorFlow KR: https://www.facebook.com/groups/TensorFlowKR/ 예제 모음: https:/...">
+    <meta itemprop="paid" content="False">
+
+      <meta itemprop="channelId" content="UCML9R2ol-l0Ab9OXoNnr7Lw">
+      <meta itemprop="videoId" content="9VckXVoJEe0">
+
+      <meta itemprop="duration" content="PT18M13S">
+      <meta itemprop="unlisted" content="False">
+
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <link itemprop="url" href="http://www.youtube.com/user/hunkims">
+        </span>
+        <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <link itemprop="url" href="https://plus.google.com/103160441993602454648">
+        </span>
+
+    <link itemprop="thumbnailUrl" href="https://i.ytimg.com/vi/9VckXVoJEe0/maxresdefault.jpg">
+    <span itemprop="thumbnail" itemscope itemtype="http://schema.org/ImageObject">
+      <link itemprop="url" href="https://i.ytimg.com/vi/9VckXVoJEe0/maxresdefault.jpg">
+      <meta itemprop="width" content="1280">
+      <meta itemprop="height" content="720">
+    </span>
+
+      <link itemprop="embedURL" href="https://www.youtube.com/embed/9VckXVoJEe0">
+      <meta itemprop="playerType" content="HTML5 Flash">
+      <meta itemprop="width" content="960">
+      <meta itemprop="height" content="720">
+
+      <meta itemprop="isFamilyFriendly" content="True">
+      <meta itemprop="regionsAllowed" content="AD,AE,AF,AG,AI,AL,AM,AO,AQ,AR,AS,AT,AU,AW,AX,AZ,BA,BB,BD,BE,BF,BG,BH,BI,BJ,BL,BM,BN,BO,BQ,BR,BS,BT,BV,BW,BY,BZ,CA,CC,CD,CF,CG,CH,CI,CK,CL,CM,CN,CO,CR,CU,CV,CW,CX,CY,CZ,DE,DJ,DK,DM,DO,DZ,EC,EE,EG,EH,ER,ES,ET,FI,FJ,FK,FM,FO,FR,GA,GB,GD,GE,GF,GG,GH,GI,GL,GM,GN,GP,GQ,GR,GS,GT,GU,GW,GY,HK,HM,HN,HR,HT,HU,ID,IE,IL,IM,IN,IO,IQ,IR,IS,IT,JE,JM,JO,JP,KE,KG,KH,KI,KM,KN,KP,KR,KW,KY,KZ,LA,LB,LC,LI,LK,LR,LS,LT,LU,LV,LY,MA,MC,MD,ME,MF,MG,MH,MK,ML,MM,MN,MO,MP,MQ,MR,MS,MT,MU,MV,MW,MX,MY,MZ,NA,NC,NE,NF,NG,NI,NL,NO,NP,NR,NU,NZ,OM,PA,PE,PF,PG,PH,PK,PL,PM,PN,PR,PS,PT,PW,PY,QA,RE,RO,RS,RU,RW,SA,SB,SC,SD,SE,SG,SH,SI,SJ,SK,SL,SM,SN,SO,SR,SS,ST,SV,SX,SY,SZ,TC,TD,TF,TG,TH,TJ,TK,TL,TM,TN,TO,TR,TT,TV,TW,TZ,UA,UG,UM,US,UY,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,YT,ZA,ZM,ZW">
+      <meta itemprop="interactionCount" content="829">
+      <meta itemprop="datePublished" content="2016-06-14">
+      <meta itemprop="genre" content="People &amp; Blogs">
+
+              <div id="watch7-speedyg-area">
+      <div class="yt-alert yt-alert-actionable yt-alert-info hid " id="speedyg-template">  <div class="yt-alert-icon">
+    <span class="icon master-sprite yt-sprite"></span>
+  </div>
+<div class="yt-alert-content" role="alert">    <div class="yt-alert-message">
+    </div>
+</div><div class="yt-alert-buttons"><a href="https://www.google.com/get/videoqualityreport/?v=9VckXVoJEe0" class="yt-uix-button   yt-uix-sessionlink yt-uix-button-alert-info yt-uix-button-size-small" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA" id="speedyg-link" target="_blank"><span class="yt-uix-button-content">원인 알아보기</span></a><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-close close yt-uix-close" type="button" onclick=";return false;" aria-label="닫기" data-close-parent-class="yt-alert"><span class="yt-uix-button-content">닫기</span></button></div></div>
+    </div>
+
+        <div id="watch-header" class="yt-card yt-card-has-padding">
+      <div id="watch7-headline" class="clearfix">
+    <div id="watch-headline-title">
+      <h1 class="watch-title-container" >
+        
+
+
+  <span id="eow-title" class="watch-title" dir="ltr" title="lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자">
+    lab13: TensorFlow를 AWS에서 GPU와 함께 돌려보자
+  </span>
+
+      </h1>
+    </div>
+  </div>
+
+    <div id="watch7-user-header" class=" spf-link ">  <a href="/user/hunkims" class="yt-uix-sessionlink yt-user-photo g-hovercard      spf-link " data-sessionlink="itct=CDEQ4TkiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw">
+      <span class="video-thumb  yt-thumb yt-thumb-48 g-hovercard"
+      data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw"
+    >
+    <span class="yt-thumb-square">
+      <span class="yt-thumb-clip">
+          <img data-thumb="https://yt3.ggpht.com/-2FvoVmUFc28/AAAAAAAAAAI/AAAAAAAAAAA/nQZywjAQrNw/s88-c-k-no-rj-c0xffffff/photo.jpg" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="48" alt="Sung Kim" width="48" >
+
+        <span class="vertical-align"></span>
+      </span>
+    </span>
+  </span>
+
+  </a>
+  <div class="yt-user-info">
+    <a href="/channel/UCML9R2ol-l0Ab9OXoNnr7Lw" class="g-hovercard yt-uix-sessionlink      spf-link " data-sessionlink="itct=CDEQ4TkiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" >Sung Kim</a>
+  </div>
+<span id="watch7-subscription-container"><span class=" yt-uix-button-subscription-container"><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-subscribe-branded yt-uix-button-has-icon no-icon-markup yt-uix-subscription-button yt-can-buffer" type="button" onclick=";return false;" aria-live="polite" aria-busy="false" data-clicktracking="itct=CDIQmysiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0yBXdhdGNo" data-style-type="branded" data-channel-external-id="UCML9R2ol-l0Ab9OXoNnr7Lw"><span class="yt-uix-button-content"><span class="subscribe-label" aria-label="구독">구독</span><span class="subscribed-label" aria-label="구독 취소">구독중</span><span class="unsubscribe-label" aria-label="구독 취소">구독 취소</span></span></button><button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon yt-uix-subscription-preferences-button" type="button" onclick=";return false;" aria-label="구독 기본설정" aria-live="polite" aria-role="button" aria-busy="false" data-channel-external-id="UCML9R2ol-l0Ab9OXoNnr7Lw"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-subscription-preferences yt-sprite"></span></span></button><span class="yt-subscription-button-subscriber-count-branded-horizontal yt-subscriber-count" title="1,480" aria-label="1,480" tabindex="0">1,480</span><span class="yt-subscription-button-subscriber-count-branded-horizontal yt-short-subscriber-count" title="1480" aria-label="1480" tabindex="0">1480</span>  
+  <div class="yt-uix-overlay "  data-overlay-style="primary" data-overlay-shape="tiny">
+    
+        <div class="yt-dialog hid ">
+    <div class="yt-dialog-base">
+      <span class="yt-dialog-align"></span>
+      <div class="yt-dialog-fg" role="dialog">
+        <div class="yt-dialog-fg-content">
+          <div class="yt-dialog-loading">
+              <div class="yt-dialog-waiting-content">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+  </div>
+
+          </div>
+          <div class="yt-dialog-content">
+              <div class="subscription-preferences-overlay-content-container">
+    <div class="subscription-preferences-overlay-loading ">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+    </div>
+    <div class="subscription-preferences-overlay-content">
+    </div>
+  </div>
+
+          </div>
+          <div class="yt-dialog-working">
+              <div class="yt-dialog-working-overlay"></div>
+  <div class="yt-dialog-working-bubble">
+    <div class="yt-dialog-waiting-content">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+        진행 중...
+    </span>
+  </p>
+
+      </div>
+  </div>
+
+          </div>
+        </div>
+        <div class="yt-dialog-focus-trap" tabindex="0"></div>
+      </div>
+    </div>
+  </div>
+
+
+  </div>
+
+</span></span></div>
+    <div id="watch8-action-buttons" class="watch-action-buttons clearfix"><div id="watch8-secondary-actions" class="watch-secondary-actions yt-uix-button-group" data-button-toggle-group="optional">      <div class="yt-uix-menu yt-uix-videoactionmenu " data-video-id="9VckXVoJEe0" data-menu-content-id="yt-uix-videoactionmenu-menu">  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup yt-uix-videoactionmenu-button addto-button pause-resume-autoplay yt-uix-menu-trigger yt-uix-tooltip" type="button" onclick=";return false;" aria-pressed="false" aria-label="Action menu." aria-haspopup="true" title="추가" role="button"><span class="yt-uix-button-content">추가</span></button>
+</div>
+
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup pause-resume-autoplay action-panel-trigger action-panel-trigger-share   yt-uix-tooltip" type="button" onclick=";return false;" title="공유
+" data-trigger-for="action-panel-share" data-button-toggle="true"><span class="yt-uix-button-content">공유
+</span></button>
+<div class="yt-uix-menu " >  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup pause-resume-autoplay yt-uix-menu-trigger yt-uix-tooltip" type="button" onclick=";return false;" id="action-panel-overflow-button" aria-pressed="false" aria-label="Action menu." aria-haspopup="true" title="추가 작업" role="button"><span class="yt-uix-button-content">더보기</span></button>
+<div class="yt-uix-menu-content yt-ui-menu-content yt-uix-menu-content-hidden" role="menu"><ul id="action-panel-overflow-menu">  <li>
+        <button type="button" class="yt-ui-menu-item has-icon yt-uix-menu-close-on-select action-panel-trigger action-panel-trigger-report"
+ data-trigger-for="action-panel-report">
+    <span class="yt-ui-menu-item-label">신고</span>
+  </button>
+
+  </li>
+  <li>
+        <button type="button" class="yt-ui-menu-item has-icon yt-uix-menu-close-on-select action-panel-trigger action-panel-trigger-transcript"
+ data-trigger-for="action-panel-transcript">
+    <span class="yt-ui-menu-item-label">스크립트</span>
+  </button>
+
+  </li>
+  <li>
+        <button type="button" class="yt-ui-menu-item has-icon yt-uix-menu-close-on-select action-panel-trigger action-panel-trigger-stats"
+ data-trigger-for="action-panel-stats">
+    <span class="yt-ui-menu-item-label">통계</span>
+  </button>
+
+  </li>
+</ul></div></div></div><div id="watch8-sentiment-actions"><div id="watch7-views-info"><div class="watch-view-count">조회수 829회</div>
+  <div class="video-extras-sparkbars">
+    <div class="video-extras-sparkbar-likes" style="width: 100.0%"></div>
+    <div class="video-extras-sparkbar-dislikes" style="width: 0.0%"></div>
+  </div>
+</div>
+
+
+
+
+
+  <span class="like-button-renderer actionable " data-button-toggle-group="optional" data-logged-in="1">
+    <span >
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-like-button like-button-renderer-like-button-unclicked  yt-uix-post-anchor yt-uix-tooltip" type="button" onclick=";return false;" title="이 동영상이 마음에 듭니다." aria-label="나 외에 사용자 9명이 이 동영상을 좋아함" data-position="bottomright" data-orientation="vertical" data-force-position="true" data-post-action="/service_ajax" data-post-data="itct=CDMQpUEiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0&amp;se=8pH38AERCAASDQoLOVZja1hWb0pFZTA%3D"><span class="yt-uix-button-content">9</span></button>
+    </span>
+    <span >
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-like-button like-button-renderer-like-button-clicked yt-uix-button-toggled yt-uix-post-anchor hid yt-uix-tooltip" type="button" onclick=";return false;" title="좋아요 취소" aria-label="나 외에 사용자 9명이 이 동영상을 좋아함" data-position="bottomright" data-orientation="vertical" data-force-position="true" data-post-action="/service_ajax" data-post-data="itct=CDMQpUEiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0&amp;se=8pH38AERCAISDQoLOVZja1hWb0pFZTA%3D"><span class="yt-uix-button-content">10</span></button>
+    </span>
+    <span >
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-dislike-button like-button-renderer-dislike-button-unclicked  yt-uix-post-anchor yt-uix-tooltip" type="button" onclick=";return false;" title="이 동영상이 마음에 들지 않습니다." aria-label="나 외에 사용자 0명이 이 동영상을 싫어함" data-position="bottomright" data-orientation="vertical" data-force-position="true" data-post-action="/service_ajax" data-post-data="itct=CDMQpUEiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0&amp;se=8pH38AERCAESDQoLOVZja1hWb0pFZTA%3D"><span class="yt-uix-button-content">0</span></button>
+    </span>
+    <span >
+      <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-opacity yt-uix-button-has-icon no-icon-markup like-button-renderer-dislike-button like-button-renderer-dislike-button-clicked yt-uix-button-toggled yt-uix-post-anchor hid yt-uix-tooltip" type="button" onclick=";return false;" title="이 동영상이 마음에 들지 않습니다." aria-label="나 외에 사용자 0명이 이 동영상을 싫어함" data-position="bottomright" data-orientation="vertical" data-force-position="true" data-post-action="/service_ajax" data-post-data="itct=CDMQpUEiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0&amp;se=8pH38AERCAISDQoLOVZja1hWb0pFZTA%3D"><span class="yt-uix-button-content">1</span></button>
+    </span>
+  </span>
+</div></div>
+  </div>
+
+
+
+      <div id="watch-action-panels" class="watch-action-panels yt-uix-button-panel hid yt-card yt-card-has-padding">
+      <div id="action-panel-share" class="action-panel-content hid">
+      <div id="watch-actions-share-loading">
+    <div class="action-panel-loading">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+    </div>
+  </div>
+  <div id="watch-actions-share-panel"></div>
+
+  </div>
+
+        <div id="action-panel-transcript" class="action-panel-content hid">
+    <div id="watch-actions-transcript-loading">
+      <div class="action-panel-loading">
+          <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+      </div>
+    </div>
+      <div id="watch-actions-transcript" class="hid">
+    <h2 class="yt-card-title">
+스크립트
+    </h2>
+      <div id="caption-line-template" class="hid">
+    <!--
+    <div class="caption-line-time">
+      <div class="caption-line-start">__start__</div>
+    </div>
+    <div class="editable-line-text">
+      <span class="editable-line-text-original">__original__</span>
+      <label class="editable-line-text-current hid">__current__</label>
+      <textarea class="editable-line-text-input hid">__input__</textarea>
+    </div>
+    -->
+  </div>
+
+
+
+    <div id="watch-transcript-container" class="yt-scrollbar" >
+      <div id="watch-transcript-not-found" class="hid">
+대화형 스크립트를 로드하지 못했습니다.
+      </div>
+
+      
+    </div>
+  </div>
+
+  </div>
+
+      <div id="action-panel-stats" class="action-panel-content hid">
+    <div class="action-panel-loading">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+      <div id="action-panel-report" class="action-panel-content hid"
+      data-auth-required="true"
+  >
+    <div class="action-panel-loading">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+    </div>
+  </div>
+
+    
+  <div id="action-panel-rental-required" class="action-panel-content hid">
+      <div id="watch-actions-rental-required">
+    <strong>동영상을 대여하면 평가할 수 있습니다.</strong>
+  </div>
+
+  </div>
+
+  <div id="action-panel-error" class="action-panel-content hid">
+    <div class="action-panel-error">
+      현재 이 기능을 사용할 수 없습니다. 나중에 다시 시도해 주세요.
+    </div>
+  </div>
+
+    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup yt-uix-button-opacity yt-uix-close" type="button" onclick=";return false;" id="action-panel-dismiss" aria-label="닫기" data-close-parent-id="watch8-action-panels"></button>
+  </div>
+
+  <div id="action-panel-details" class="action-panel-content yt-uix-expander yt-card yt-card-has-padding yt-uix-expander-collapsed"><div id="watch-description" class="yt-uix-button-panel"><div id="watch-description-content"><div id="watch-description-clip"><div id="watch-uploader-info"><strong class="watch-time-text">게시일: 2016. 6. 14.</strong></div><div id="watch-description-text" class=""><p id="eow-description" class="" >GPU에서 Tensorflow를 실행하기 위한 인스턴스 만들기와 설정을 살펴봅니다. <br /><br />수업페이지; <a href="http://hunkim.github.io/ml/" class=" yt-uix-servicelink " data-url="http://hunkim.github.io/ml/" data-servicelink="CDAQ6TgiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" target="_blank" rel="nofollow">http://hunkim.github.io/ml/</a><br />TensorFlow KR: <a href="https://www.facebook.com/groups/TensorFlowKR/" class=" yt-uix-servicelink " data-url="https://www.facebook.com/groups/TensorFlowKR/" data-servicelink="CDAQ6TgiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" target="_blank" rel="nofollow">https://www.facebook.com/groups/Tenso...</a><br />예제 모음: <a href="https://github.com/nlintz/TensorFlow-Tutorials" class=" yt-uix-servicelink " data-url="https://github.com/nlintz/TensorFlow-Tutorials" data-servicelink="CDAQ6TgiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" target="_blank" rel="nofollow">https://github.com/nlintz/TensorFlow-...</a></p></div>  <div id="watch-description-extras">
+    <ul class="watch-extras-section">
+            <li class="watch-meta-item yt-uix-expander-body">
+    <h4 class="title">
+      카테고리
+    </h4>
+    <ul class="content watch-info-tag-list">
+        <li><a href="/channel/UC1vGae2Q3oT5MkhhfW8lwjg" class="g-hovercard yt-uix-sessionlink      spf-link " data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA" data-ytid="UC1vGae2Q3oT5MkhhfW8lwjg" >인물/블로그</a></li>
+    </ul>
+  </li>
+
+            <li class="watch-meta-item yt-uix-expander-body">
+    <h4 class="title">
+      라이선스
+    </h4>
+    <ul class="content watch-info-tag-list">
+        <li>표준 YouTube 라이선스</li>
+    </ul>
+  </li>
+
+    </ul>
+  </div>
+</div></div></div>  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-expander yt-uix-expander-head yt-uix-expander-collapsed-body yt-uix-gen204" type="button" onclick=";return false;" data-gen204="feature=watch-show-more-metadata"><span class="yt-uix-button-content">더보기</span></button>
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-expander yt-uix-expander-head yt-uix-expander-body" type="button" onclick=";return false;"><span class="yt-uix-button-content">간략히</span></button>
+</div>
+
+        <div id="watch-discussion" class="branded-page-box yt-card">
+      <div id="comment-section-renderer"
+          class="comment-section-renderer vve-check"
+          data-visibility-tracking="CC0Quy8iEwiPjPiqwdDNAhUDilgKHXFACMYo-B0=">
+          <div class="action-panel-loading">
+              <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+          </div>
+      </div>
+  </div>
+
+
+      </div>
+      <div id="watch7-sidebar" class="watch-sidebar">
+            <div id="placeholder-playlist" class="watch-playlist player-height  hid"></div>
+
+
+  <div id="watch7-sidebar-contents" class="watch-sidebar-gutter   yt-card yt-card-has-padding    yt-uix-expander yt-uix-expander-collapsed">
+      <div id="watch7-sidebar-offer">
+        
+      </div>
+
+    <div id="watch7-sidebar-ads">
+      
+    </div>
+    <div id="watch7-sidebar-modules">
+          <div class="watch-sidebar-section">
+    <div class="autoplay-bar">
+      <div class="checkbox-on-off">
+       <label for="autoplay-checkbox">자동재생</label>
+       <span class="autoplay-hovercard yt-uix-hovercard">
+          <span class="autoplay-info-icon yt-uix-button-opacity yt-uix-hovercard-target yt-sprite" data-orientation="vertical" data-position="topright"></span>
+<span class="yt-uix-hovercard-content">자동재생을 사용하도록 설정하면 추천 동영상이 자동으로 이어서 재생됩니다.</span>        </span>
+          <span class="yt-uix-checkbox-on-off ">
+<input id="autoplay-checkbox" class="" type="checkbox"  checked><label for="autoplay-checkbox" id="autoplay-checkbox-label"><span class="checked"></span><span class="toggle"></span><span class="unchecked"></span></label>  </span>
+
+      </div>
+      <h4 class="watch-sidebar-head">
+          다음 동영상
+      </h4>
+            <div class="watch-sidebar-body">
+      <ul class="video-list">
+        <li class="video-list-item related-list-item show-video-time">
+          
+
+    <div class="content-wrapper">
+    <a href="/watch?v=KbNbWTnlYXs" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBcQpDAYACITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIHYXV0b25hdkjto6TQ1YvJq_UB" title="lec11-3 ConvNet의 활용예" rel="spf-prefetch" data-visibility-tracking="CBcQpDAYACITCI-M-KrB0M0CFQOKWAodcUAIxij4HUD7wpXPk-vW2Sk=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-412665">
+    lec11-3 ConvNet의 활용예
+  </span>
+  <span class="accessible-description" id="description-id-412665">
+     - 길이: 12:31
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="autonav">Sung Kim</span></span>
+  <span class="stat view-count">조회수 1,482회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=KbNbWTnlYXs" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBcQpDAYACITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIHYXV0b25hdkjto6TQ1YvJq_UB" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBcQpDAYACITCI-M-KrB0M0CFQOKWAodcUAIxij4HUD7wpXPk-vW2Sk=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="KbNbWTnlYXs"><img width="120" data-thumb="https://i.ytimg.com/vi/KbNbWTnlYXs/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=HsvXoiEXDGg9KGih8o2FjtpVAsM" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      12:31
+    </span>
+
+  </div>
+
+
+        </li>
+      </ul>
+    </div>
+
+    </div>
+  </div>
+
+        
+          <div class="watch-sidebar-section">
+      <hr class="watch-sidebar-separation-line">
+    <div class="watch-sidebar-body">
+      <ul id="watch-related" class="video-list">
+            <li class="video-list-item related-list-item  show-video-time related-list-item-compact-playlist"><a href="/watch?v=BS6O0zOGX4E&amp;list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm" class="yt-uix-sessionlink related-playlist yt-pl-thumb-link spf-link  vve-check       spf-link " data-sessionlink="itct=CCsQojAYACITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIHcmVsbGlzdEjto6TQ1YvJq_UB" data-visibility-tracking="CCsQojAYACITCI-M-KrB0M0CFQOKWAodcUAIxij4HQ==" rel="spf-prefetch">
+  <span class="yt-pl-thumb  is-small">
+      
+    <span class="video-thumb  yt-thumb yt-thumb-120"
+    >
+    <span class="yt-thumb-default">
+      <span class="yt-thumb-clip">
+          <img data-thumb="//i.ytimg.com/vi/BS6O0zOGX4E/default.jpg" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" aria-hidden="true" alt="" width="120" >
+
+        <span class="vertical-align"></span>
+      </span>
+    </span>
+  </span>
+
+
+    <span class="sidebar">
+      <span class="yt-pl-sidebar-content yt-valign">
+        <span class="yt-valign-container">
+              <span class="formatted-video-count-label">
+      동영상 <b>37</b>개
+  </span>
+
+          <span class="yt-pl-icon yt-pl-icon-reg yt-sprite"></span>
+        </span>
+      </span>
+    </span>
+
+      <span class="yt-pl-thumb-overlay">
+        <span class="yt-pl-thumb-overlay-content">
+          <span class="play-icon yt-sprite"></span>
+          <span class="yt-pl-thumb-overlay-text">
+모두 재생
+          </span>
+        </span>
+      </span>
+
+  </span>
+<span dir="ltr" class="title" title="모두를 위한 딥러닝 강좌 시즌 1">모두를 위한 딥러닝 강좌 시즌 1</span><span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw">Sung Kim</span></span></a></li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=zQd81k-bo8U" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCoQpDAYASITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIKd2F0Y2gtdnJlY0jto6TQ1YvJq_UB" title="초거대 말벌집을 쪼개 보았다 [릴마블] i cut bee comb" rel="spf-prefetch" data-visibility-tracking="CCoQpDAYASITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDFx-785Jrfg80B" >
+  <span dir="ltr" class="title" aria-describedby="description-id-556048">
+    초거대 말벌집을 쪼개 보았다 [릴마블] i cut bee comb
+  </span>
+  <span class="accessible-description" id="description-id-556048">
+     - 길이: 5:52
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCHP9h7X1oGcbKXkCpp9DsUA" data-name="watch-vrec">릴마블 Lil Marvel</span></span>
+  <span class="stat view-count">맞춤 동영상<ul class="yt-badge-list "><li class="yt-badge-item"><span class="yt-badge " >새 동영상</span></li></ul></span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=zQd81k-bo8U" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCoQpDAYASITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIKd2F0Y2gtdnJlY0jto6TQ1YvJq_UB" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCoQpDAYASITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDFx-785Jrfg80B" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="zQd81k-bo8U"><img width="120" data-thumb="https://i.ytimg.com/vi/zQd81k-bo8U/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=r8HtkFfmzoDyviXrv2BtBdm_iuI" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      5:52
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=jxFnqnyX4G4" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCkQpDAYAiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIKd2F0Y2gtdnJlY0jto6TQ1YvJq_UB" title="금광석 녹이기" rel="spf-prefetch" data-visibility-tracking="CCkQpDAYAiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDuwN_kp_XZiI8B" >
+  <span dir="ltr" class="title" aria-describedby="description-id-383298">
+    금광석 녹이기
+  </span>
+  <span class="accessible-description" id="description-id-383298">
+     - 길이: 6:52
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCGLjbai1woLlk9Cp-aftnmA" data-name="watch-vrec">byung jue Kim</span></span>
+  <span class="stat view-count">맞춤 동영상</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=jxFnqnyX4G4" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCkQpDAYAiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIKd2F0Y2gtdnJlY0jto6TQ1YvJq_UB" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCkQpDAYAiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDuwN_kp_XZiI8B" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="jxFnqnyX4G4"><img width="120" data-thumb="https://i.ytimg.com/vi/jxFnqnyX4G4/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=z5QhuGerp5axPnXk8sKkoaW7HAY" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      6:52
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=6KlkiKyjEu0" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCgQpDAYAyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lab11: ConvNet을 TensorFlow로 구현하자 (MNIST 99%)" rel="spf-prefetch" data-visibility-tracking="CCgQpDAYAyITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDtpYzlipHZ1OgB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-794075">
+    lab11: ConvNet을 TensorFlow로 구현하자 (MNIST 99%)
+  </span>
+  <span class="accessible-description" id="description-id-794075">
+     - 길이: 16:20
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 1,660회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=6KlkiKyjEu0" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCgQpDAYAyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCgQpDAYAyITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDtpYzlipHZ1OgB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="6KlkiKyjEu0"><img width="120" data-thumb="https://i.ytimg.com/vi/6KlkiKyjEu0/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=vmFltVAYvy4-OOlr4RKhwP19N70" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      16:20
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=M853zrIwiJ4" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCcQpDAYBCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="TF-KR 첫 모임: Docker 환경에서 TensorFlow를 설치하고 응용하기" rel="spf-prefetch" data-visibility-tracking="CCcQpDAYBCITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCekcKR6_md5zM=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-540336">
+    TF-KR 첫 모임: Docker 환경에서 TensorFlow를 설치하고 응용하기
+  </span>
+  <span class="accessible-description" id="description-id-540336">
+     - 길이: 47:22
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 116회<ul class="yt-badge-list "><li class="yt-badge-item"><span class="yt-badge " >새 동영상</span></li></ul></span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=M853zrIwiJ4" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCcQpDAYBCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCcQpDAYBCITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCekcKR6_md5zM=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="M853zrIwiJ4"><img width="120" data-thumb="https://i.ytimg.com/vi/M853zrIwiJ4/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=5_JztgorzZJu3nvCPxZYRaSjjqk" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      47:22
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=eDKxY5Z5dVQ" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCYQpDAYBSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lab9-2: Tensor Board로 딥네트웍 들여다보기" rel="spf-prefetch" data-visibility-tracking="CCYQpDAYBSITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDU6uWzuaysmXg=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-971756">
+    lab9-2: Tensor Board로 딥네트웍 들여다보기
+  </span>
+  <span class="accessible-description" id="description-id-971756">
+     - 길이: 12:36
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 2,183회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=eDKxY5Z5dVQ" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCYQpDAYBSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCYQpDAYBSITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDU6uWzuaysmXg=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="eDKxY5Z5dVQ"><img width="120" data-thumb="https://i.ytimg.com/vi/eDKxY5Z5dVQ/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=_fKJnDtg3iaN2U-QDCmfcPAPDMM" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      12:36
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=cKtg_fpw88c" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCUQpDAYBiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec10-1: Sigmoid 보다 ReLU가 더 좋아" rel="spf-prefetch" data-visibility-tracking="CCUQpDAYBiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDH58PT35_Y1XA=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-831557">
+    lec10-1: Sigmoid 보다 ReLU가 더 좋아
+  </span>
+  <span class="accessible-description" id="description-id-831557">
+     - 길이: 17:30
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 2,408회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=cKtg_fpw88c" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCUQpDAYBiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCUQpDAYBiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDH58PT35_Y1XA=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="cKtg_fpw88c"><img width="120" data-thumb="https://i.ytimg.com/vi/cKtg_fpw88c/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=uvlg27dEE2uy3pW3jd-bENbQOek" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      17:30
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=YHsbHjTBx9Q" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCQQpDAYByITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec10-4: 레고처럼 넷트웍 모듈을 마음껏 쌓아 보자" rel="spf-prefetch" data-visibility-tracking="CCQQpDAYByITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDUj4em4-PGvWA=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-104195">
+    lec10-4: 레고처럼 넷트웍 모듈을 마음껏 쌓아 보자
+  </span>
+  <span class="accessible-description" id="description-id-104195">
+     - 길이: 5:09
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 1,431회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=YHsbHjTBx9Q" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCQQpDAYByITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCQQpDAYByITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDUj4em4-PGvWA=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="YHsbHjTBx9Q"><img width="120" data-thumb="https://i.ytimg.com/vi/YHsbHjTBx9Q/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=cDSjnAXqiFtt5vzCaSUbl38xal0" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      5:09
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=573EZkzfnZ0" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCMQpDAYCCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec9-2:  딥넷트웍 학습 시키기 (backpropagation)" rel="spf-prefetch" data-visibility-tracking="CCMQpDAYCCITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCdu_7m5Izx3ucB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-946730">
+    lec9-2:  딥넷트웍 학습 시키기 (backpropagation)
+  </span>
+  <span class="accessible-description" id="description-id-946730">
+     - 길이: 18:28
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 2,759회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=573EZkzfnZ0" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCMQpDAYCCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCMQpDAYCCITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCdu_7m5Izx3ucB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="573EZkzfnZ0"><img width="120" data-thumb="https://i.ytimg.com/vi/573EZkzfnZ0/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=iglZiKVC6dxlpeQBV9UEOg2J7XQ" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      18:28
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=IiB6oElqCxA" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCIQpDAYCSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="TF-KR 첫모임: CNN과 Data Mutation을 이용한 Time Series Classification" rel="spf-prefetch" data-visibility-tracking="CCIQpDAYCSITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCQlqjLhNSekCI=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-569403">
+    TF-KR 첫모임: CNN과 Data Mutation을 이용한 Time Series Classification
+  </span>
+  <span class="accessible-description" id="description-id-569403">
+     - 길이: 55:26
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 267회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=IiB6oElqCxA" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCIQpDAYCSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCIQpDAYCSITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCQlqjLhNSekCI=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="IiB6oElqCxA"><img width="120" data-thumb="https://i.ytimg.com/vi/IiB6oElqCxA/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=4tz8iXvHp3SrWNUpF4Lxoa6QIqI" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      55:26
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=GYecDQQwTdI" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCEQpDAYCiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec9-1: XOR 문제 딥러닝으로 풀기" rel="spf-prefetch" data-visibility-tracking="CCEQpDAYCiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDSm8Gh0IHnwxk=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-488006">
+    lec9-1: XOR 문제 딥러닝으로 풀기
+  </span>
+  <span class="accessible-description" id="description-id-488006">
+     - 길이: 15:03
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 2,750회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=GYecDQQwTdI" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCEQpDAYCiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCEQpDAYCiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDSm8Gh0IHnwxk=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="GYecDQQwTdI"><img width="120" data-thumb="https://i.ytimg.com/vi/GYecDQQwTdI/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=ZdSYBVCEJeuKe7UoH8WP-QbMCYs" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      15:03
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=9i7FBbcZPMA" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CCAQpDAYCyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lab9-1: XOR을 위한 텐스플로우 딥넷트웍" rel="spf-prefetch" data-visibility-tracking="CCAQpDAYCyITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDA-eS426Cxl_YB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-86160">
+    lab9-1: XOR을 위한 텐스플로우 딥넷트웍
+  </span>
+  <span class="accessible-description" id="description-id-86160">
+     - 길이: 13:51
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 2,251회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=9i7FBbcZPMA" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CCAQpDAYCyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CCAQpDAYCyITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDA-eS426Cxl_YB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="9i7FBbcZPMA"><img width="120" data-thumb="https://i.ytimg.com/vi/9i7FBbcZPMA/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=gpIAQIXML9ps0AABtm36u_4xjAg" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      13:51
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=KVv1nMSlPzY" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CB8QpDAYDCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec 07-2: Training/Testing 데이타 셋" rel="spf-prefetch" data-visibility-tracking="CB8QpDAYDCITCI-M-KrB0M0CFQOKWAodcUAIxij4HUC2_pSlzLP9rSk=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-371826">
+    lec 07-2: Training/Testing 데이타 셋
+  </span>
+  <span class="accessible-description" id="description-id-371826">
+     - 길이: 9:22
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 1,929회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=KVv1nMSlPzY" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CB8QpDAYDCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CB8QpDAYDCITCI-M-KrB0M0CFQOKWAodcUAIxij4HUC2_pSlzLP9rSk=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="KVv1nMSlPzY"><img width="120" data-thumb="https://i.ytimg.com/vi/KVv1nMSlPzY/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=KbGh6RIdvNSWMUt9m7_IiRQVKjc" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      9:22
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=AByVbUX1PUI" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CB4QpDAYDSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec 08-2: 딥러닝의 기본 개념2: Back-propagation 과 2006/2007 &#39;딥&#39;의 출현" rel="spf-prefetch" data-visibility-tracking="CB4QpDAYDSITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDC-tSv1K2lDg==" >
+  <span dir="ltr" class="title" aria-describedby="description-id-581348">
+    lec 08-2: 딥러닝의 기본 개념2: Back-propagation 과 2006/2007 &#39;딥&#39;의 출현
+  </span>
+  <span class="accessible-description" id="description-id-581348">
+     - 길이: 12:37
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 2,931회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=AByVbUX1PUI" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CB4QpDAYDSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CB4QpDAYDSITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDC-tSv1K2lDg==" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="AByVbUX1PUI"><img width="120" data-thumb="https://i.ytimg.com/vi/AByVbUX1PUI/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=DIoVjbgV5Z20WpGdQnRTbcA9GKQ" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      12:37
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=MFAnsx1y9ZI" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CB0QpDAYDiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="ML lec 6-1 - Softmax Regression: 기본 개념 소개" rel="spf-prefetch" data-visibility-tracking="CB0QpDAYDiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCS68vrsfaJqDA=" >
+  <span dir="ltr" class="title" aria-describedby="description-id-900200">
+    ML lec 6-1 - Softmax Regression: 기본 개념 소개
+  </span>
+  <span class="accessible-description" id="description-id-900200">
+     - 길이: 10:17
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 3,182회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=MFAnsx1y9ZI" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CB0QpDAYDiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CB0QpDAYDiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCS68vrsfaJqDA=" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="MFAnsx1y9ZI"><img width="120" data-thumb="https://i.ytimg.com/vi/MFAnsx1y9ZI/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=jllVCJ2kAflglavceRIBG4dLA6o" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      10:17
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=1jPjVoDV_uo" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBwQpDAYDyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec 07-1: 학습 rate, Overfitting, 그리고 일반화 (Regularization)" rel="spf-prefetch" data-visibility-tracking="CBwQpDAYDyITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDq_deG6Or4mdYB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-711693">
+    lec 07-1: 학습 rate, Overfitting, 그리고 일반화 (Regularization)
+  </span>
+  <span class="accessible-description" id="description-id-711693">
+     - 길이: 14:03
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 2,267회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=1jPjVoDV_uo" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBwQpDAYDyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBwQpDAYDyITCI-M-KrB0M0CFQOKWAodcUAIxij4HUDq_deG6Or4mdYB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="1jPjVoDV_uo"><img width="120" data-thumb="https://i.ytimg.com/vi/1jPjVoDV_uo/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=lyvfNk3efLLNawdp7aX9_eUFFX0" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      14:03
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=oZyvmtqLmLo" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBsQpDAYECITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec9-x: 특별편: 10분안에 미분 정리하기 (lec9-2 이전에 보세요)" rel="spf-prefetch" data-visibility-tracking="CBsQpDAYECITCI-M-KrB0M0CFQOKWAodcUAIxij4HUC6sa7UrfOrzqEB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-90610">
+    lec9-x: 특별편: 10분안에 미분 정리하기 (lec9-2 이전에 보세요)
+  </span>
+  <span class="accessible-description" id="description-id-90610">
+     - 길이: 9:29
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 1,933회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=oZyvmtqLmLo" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBsQpDAYECITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBsQpDAYECITCI-M-KrB0M0CFQOKWAodcUAIxij4HUC6sa7UrfOrzqEB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="oZyvmtqLmLo"><img width="120" data-thumb="https://i.ytimg.com/vi/oZyvmtqLmLo/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=4IRREvxEur_vJfUKj_6nx9mH9e8" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      9:29
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=01nDEZe0BfU" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBoQpDAYESITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="TF-KR 첫 모임: Tensorflow 모델 디버깅을 위한 팁과 가이드" rel="spf-prefetch" data-visibility-tracking="CBoQpDAYESITCI-M-KrB0M0CFQOKWAodcUAIxij4HUD1i9C9meLwrNMB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-747454">
+    TF-KR 첫 모임: Tensorflow 모델 디버깅을 위한 팁과 가이드
+  </span>
+  <span class="accessible-description" id="description-id-747454">
+     - 길이: 36:17
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 181회<ul class="yt-badge-list "><li class="yt-badge-item"><span class="yt-badge " >새 동영상</span></li></ul></span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=01nDEZe0BfU" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBoQpDAYESITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBoQpDAYESITCI-M-KrB0M0CFQOKWAodcUAIxij4HUD1i9C9meLwrNMB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="01nDEZe0BfU"><img width="120" data-thumb="https://i.ytimg.com/vi/01nDEZe0BfU/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=_itlmBcmLYcFnQSyOC7aE2IK-jc" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      36:17
+    </span>
+
+  </div>
+
+</li><li class="video-list-item related-list-item  show-video-time related-list-item-compact-video">
+
+    <div class="content-wrapper">
+    <a href="/watch?v=2-75C-yZaoA" class="yt-uix-sessionlink  content-link spf-link        spf-link " data-sessionlink="itct=CBkQpDAYEiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" title="lec11-2: ConvNet Max pooling 과 Full Network" rel="spf-prefetch" data-visibility-tracking="CBkQpDAYEiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCA1eXkvqG-99sB" >
+  <span dir="ltr" class="title" aria-describedby="description-id-768189">
+    lec11-2: ConvNet Max pooling 과 Full Network
+  </span>
+  <span class="accessible-description" id="description-id-768189">
+     - 길이: 5:33
+  </span>
+  <span class="stat attribution"><span class="g-hovercard" data-ytid="UCML9R2ol-l0Ab9OXoNnr7Lw" data-name="relmfu">Sung Kim</span></span>
+  <span class="stat view-count">조회수 1,598회</span>
+</a>
+  </div>
+  <div class="thumb-wrapper">
+
+    <a href="/watch?v=2-75C-yZaoA" class="yt-uix-sessionlink  vve-check thumb-link spf-link        spf-link " data-sessionlink="itct=CBkQpDAYEiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIGcmVsbWZ1SO2jpNDVi8mr9QE" tabindex="-1" rel="spf-prefetch" data-visibility-tracking="CBkQpDAYEiITCI-M-KrB0M0CFQOKWAodcUAIxij4HUCA1eXkvqG-99sB" aria-hidden="true"><span class="yt-uix-simple-thumb-wrap yt-uix-simple-thumb-related" tabindex="0" data-vid="2-75C-yZaoA"><img width="120" data-thumb="https://i.ytimg.com/vi/2-75C-yZaoA/hqdefault.jpg?custom=true&amp;w=120&amp;h=90&amp;jpg444=true&amp;jpgq=90&amp;sp=68&amp;sigh=T7QFtsml7gprM7L4mYDKy5Ao39A" aria-hidden="true" alt="" style="top: -12px" src="https://s.ytimg.com/yts/img/pixel-vfl3z5WfW.gif" height="90" ></span></a>
+        <span class="video-time">
+      5:33
+    </span>
+
+  </div>
+
+</li>
+                  <div id="watch-more-related" class="hid">
+    <li id="watch-more-related-loading">
+추가 추천 동영상 로드 중...
+    </li>
+  </div>
+  <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-expander" type="button" onclick=";return false;" id="watch-more-related-button" data-continuation="CBQSFhILOVZja1hWb0pFZTDAAQDIAQDgAQEYAA%3D%3D" data-button-action="yt.www.watch.related.loadMore"><span class="yt-uix-button-content">더보기</span></button>
+
+      </ul>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+      </div>
+    </div>
+  </div>
+  <div id="watch7-hidden-extras">
+      <div style="visibility: hidden; height: 0px; padding: 0px; overflow: hidden;">
+  </div>
+
+  </div>
+
+
+  </div>
+
+</div></div></div></div>  <div id="footer-container" class="yt-base-gutter force-layer"><div id="footer"><div id="footer-main"><div id="footer-logo"><a href="/" id="footer-logo-link" title="YouTube 홈" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA&amp;ved=CAEQpmEiEwiPjPiqwdDNAhUDilgKHXFACMYo-B0" class="yt-uix-sessionlink"><span class="footer-logo-icon yt-sprite"></span></a></div>  <ul class="pickers yt-uix-button-group" data-button-toggle-group="optional">
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon" type="button" onclick=";return false;" id="yt-picker-language-button" data-button-menu-id="arrow-display" data-button-action="yt.www.picker.load" data-picker-position="footer" data-picker-key="language" data-button-toggle="true"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-footer-language yt-sprite"></span></span><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+언어:
+  </span>
+  한국어
+</span><span class="yt-uix-button-arrow yt-sprite"></span></button>
+
+
+      </li>
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default" type="button" onclick=";return false;" id="yt-picker-country-button" data-button-menu-id="arrow-display" data-button-action="yt.www.picker.load" data-picker-position="footer" data-picker-key="country" data-button-toggle="true"><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+국가:
+  </span>
+  한국
+</span><span class="yt-uix-button-arrow yt-sprite"></span></button>
+
+
+      </li>
+      <li>
+            <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default" type="button" onclick=";return false;" id="yt-picker-safetymode-button" data-button-menu-id="arrow-display" data-button-action="yt.www.picker.load" data-picker-position="footer" data-picker-key="safetymode" data-button-toggle="true"><span class="yt-uix-button-content">  <span class="yt-picker-button-label">
+제한 모드:
+  </span>
+사용 안함
+</span><span class="yt-uix-button-arrow yt-sprite"></span></button>
+
+
+      </li>
+  </ul>
+<a href="/feed/history" class="yt-uix-button  footer-history yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default yt-uix-button-has-icon" data-sessionlink="ei=XXZ1V8_pJYOU4gLxgKGwDA"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-footer-history yt-sprite"></span></span><span class="yt-uix-button-content">최근 본 동영상</span></a>    <button class="yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-button-has-icon yt-uix-button-reverse yt-google-help-link inq-no-click " type="button" onclick=";return false;" id="google-help" data-ghelp-tracking-param="" data-ghelp-anchor="google-help" data-load-chat-support="" data-feedback-product-id="59"><span class="yt-uix-button-icon-wrapper"><span class="yt-uix-button-icon yt-uix-button-icon-questionmark yt-sprite"></span></span><span class="yt-uix-button-content">도움말
+</span></button>
+      <div id="yt-picker-language-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+  </div>
+
+      <div id="yt-picker-country-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+  </div>
+
+      <div id="yt-picker-safetymode-footer" class="yt-picker" style="display: none">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+  </div>
+
+</div><div id="footer-links"><ul id="footer-links-primary">  <li><a href="//www.youtube.com/yt/about/ko/">정보</a></li>
+  <li><a href="//www.youtube.com/yt/press/ko/">프레스</a></li>
+  <li><a href="//www.youtube.com/yt/copyright/ko/">저작권</a></li>
+  <li><a href="//www.youtube.com/yt/creators/ko/">크리에이터</a></li>
+  <li><a href="//www.youtube.com/yt/advertise/ko/">광고</a></li>
+  <li><a href="//www.youtube.com/yt/dev/ko/">개발자</a></li>
+  <li><a href="https://plus.google.com/+youtube" dir="ltr">+YouTube</a></li>
+</ul><ul id="footer-links-secondary">  <li><a href="/t/terms">이용약관</a></li>
+  <li><a href="https://www.google.co.kr/intl/ko/policies/privacy/">개인정보 보호</a></li>
+  <li><a href="//www.youtube.com/yt/policyandsafety/ko/">
+정책 및 안전
+  </a></li>
+  <li><a href="//support.google.com/youtube/?hl=ko" onclick="return yt.www.feedback.start(59);" class="reportbug">의견 보내기</a></li>
+  <li><a href="/testtube">새로운 기능</a></li>
+  <li></li>
+</ul></div></div></div>
+
+
+      <div class="yt-dialog hid " id="feed-privacy-lb">
+    <div class="yt-dialog-base">
+      <span class="yt-dialog-align"></span>
+      <div class="yt-dialog-fg" role="dialog">
+        <div class="yt-dialog-fg-content">
+          <div class="yt-dialog-loading">
+              <div class="yt-dialog-waiting-content">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+로드 중...
+    </span>
+  </p>
+
+  </div>
+
+          </div>
+          <div class="yt-dialog-content">
+              <div id="feed-privacy-dialog">
+  </div>
+
+          </div>
+          <div class="yt-dialog-working">
+              <div class="yt-dialog-working-overlay"></div>
+  <div class="yt-dialog-working-bubble">
+    <div class="yt-dialog-waiting-content">
+        <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+        진행 중...
+    </span>
+  </p>
+
+      </div>
+  </div>
+
+          </div>
+        </div>
+        <div class="yt-dialog-focus-trap" tabindex="0"></div>
+      </div>
+    </div>
+  </div>
+
+
+<div id="hidden-component-template-wrapper" class="hid">  <div id="yt-uix-videoactionmenu-menu" class="yt-ui-menu-content">
+      <div class="hide-on-create-pl-panel">
+    <h3>
+추가
+    </h3>
+  </div>
+  <div class="add-to-widget">
+      <p class="yt-spinner ">
+        <span class="yt-spinner-img  yt-sprite" title="로드 중 아이콘"></span>
+
+    <span class="yt-spinner-message">
+        재생목록 로드 중...
+    </span>
+  </p>
+
+  </div>
+
+  </div>
+</div>    <script>var ytspf = ytspf || {};ytspf.enabled = true;ytspf.config = {'reload-identifier': 'spfreload'};ytspf.config['request-headers'] = {'X-YouTube-Identity-Token': "QUFFLUhqa19rdmNDNU9ENllCMUFuTHNfNzh2N3JDZllGd3w="};ytspf.config['experimental-request-headers'] = ytspf.config['request-headers'];ytspf.config['cache-max'] = 50;ytspf.config['navigate-limit'] = 50;ytspf.config['navigate-lifetime'] = 64800000;if (yt && yt.scheduler && yt.scheduler.SpfScheduler) {ytspf.config['advanced-task-scheduler'] = yt.scheduler.SpfScheduler.instance;ytspf.config['experimental-process-async'] = true;}ytspf.config['animation-duration'] = 0;</script>
+  <script src="//s.ytimg.com/yts/jsbin/spf-vflVj4-IK/spf.js" type="text/javascript" name="spf/spf"></script>
+  <script src="//s.ytimg.com/yts/jsbin/www-en_US-vflqKVo7o/base.js" name="www/base"></script>
+<script>spf.script.path({'www/': '//s.ytimg.com/yts/jsbin/www-en_US-vflqKVo7o/'});var ytdepmap = {"www/base": null, "www/common": "www/base", "www/angular_base": "www/common", "www/channels_accountupload": "www/common", "www/channels": "www/common", "www/dashboard": "www/common", "www/debugpolymer": "www/common", "www/downloadreports": "www/common", "www/experiments": "www/common", "www/feed": "www/common", "www/instant": "www/common", "www/legomap": "www/common", "www/live_chat": "www/common", "www/live_chat_moderation": "www/common", "www/promo_join_network": "www/common", "www/results_harlemshake": "www/common", "www/results": "www/common", "www/results_starwars": "www/common", "www/subscriptionmanager": "www/common", "www/unlimited": "www/common", "www/watch": "www/common", "www/ypc_bootstrap": "www/common", "www/ypc_core": "www/common", "www/channels_edit": "www/channels", "www/live_broadcasts": "www/angular_base", "www/live_dashboard": "www/angular_base", "www/videomanager": "www/angular_base", "www/watch_autoplayrenderer": "www/watch", "www/watch_edit": "www/watch", "www/watch_editor": "www/watch", "www/watch_live": "www/watch", "www/watch_promos": "www/watch", "www/watch_speedyg": "www/watch", "www/watch_transcript": "www/watch", "www/watch_videoshelf": "www/watch", "www/ct_advancedsearch": "www/videomanager", "www/my_videos": "www/videomanager"};spf.script.declare(ytdepmap);</script><script>if (window.ytcsi) {window.ytcsi.tick("je", null, '');}</script>      <script>
+    yt.setConfig({
+      'VIDEO_ID': "9VckXVoJEe0",
+      'THUMB_LOADER_PAUSE_MS': 0,
+      'THUMB_LOADER_GROUP_PX': 400,
+      'THUMB_LOADER_IGNORE_FOLD': false,
+      'WAIT_TO_DELAYLOAD_FRAME_CSS': true,
+      'IS_UNAVAILABLE_PAGE': false,
+      'DROPDOWN_ARROW_URL': "https:\/\/s.ytimg.com\/yts\/img\/pixel-vfl3z5WfW.gif",
+      'AUTONAV_EXTRA_CHECK': false,
+
+      'JS_PAGE_MODULES': [
+        'www/watch',
+        'www/ypc_bootstrap',
+          'www/watch_transcript',
+          'www/watch_speedyg',
+          'www/watch_autoplayrenderer',
+        ''       ],
+
+
+      'REPORTVIDEO_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-reportvideo-vfl-cIvEY\/www-reportvideo.js",
+      'REPORTVIDEO_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-watch-reportvideo-webp-vflaFuVrK.css",
+
+
+      'TIMING_AFT_KEYS': ['pbp', 'pbs'],
+      'YPC_CAN_RATE_VIDEO': true,
+
+
+        'RELATED_PLAYER_ARGS': {"rvs":"id=KbNbWTnlYXs\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FKbNbWTnlYXs%2Fhqdefault.webp\u0026session_data=itct%3DCBUQvU4YACITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026endscreen_autoplay_session_data=autonav%3D1%26itct%3DCBYQ4ZIBIhMIj4z4qsHQzQIVA4pYCh1xQAjGKPgdMgxyZWxhdGVkLWF1dG9I7aOk0NWLyav1AQ%253D%253D%26playnext%3D1\u0026title=lec11-3+ConvNet%EC%9D%98+%ED%99%9C%EC%9A%A9%EC%98%88\u0026author=Sung+Kim\u0026length_seconds=751,list=PLlMkM4tgfjnLSOjrEJN31gZATbcj_MpUm\u0026session_data=itct%3DCBQQvk4YASITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026thumbnail_ids=BS6O0zOGX4E\u0026video_id=BS6O0zOGX4E\u0026playlist_title=%EB%AA%A8%EB%91%90%EB%A5%BC+%EC%9C%84%ED%95%9C+%EB%94%A5%EB%9F%AC%EB%8B%9D+%EA%B0%95%EC%A2%8C+%EC%8B%9C%EC%A6%8C+1\u0026playlist_length=37,id=zQd81k-bo8U\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FzQd81k-bo8U%2Fhqdefault.webp\u0026session_data=itct%3DCBMQvU4YAiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=%EC%B4%88%EA%B1%B0%EB%8C%80+%EB%A7%90%EB%B2%8C%EC%A7%91%EC%9D%84+%EC%AA%BC%EA%B0%9C+%EB%B3%B4%EC%95%98%EB%8B%A4+%5B%EB%A6%B4%EB%A7%88%EB%B8%94%5D+i+cut+bee+comb\u0026author=%EB%A6%B4%EB%A7%88%EB%B8%94+Lil+Marvel\u0026length_seconds=352,id=jxFnqnyX4G4\u0026session_data=itct%3DCBIQvU4YAyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=%EA%B8%88%EA%B4%91%EC%84%9D+%EB%85%B9%EC%9D%B4%EA%B8%B0\u0026author=byung+jue+Kim\u0026length_seconds=412,id=6KlkiKyjEu0\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2F6KlkiKyjEu0%2Fhqdefault.webp\u0026session_data=itct%3DCBEQvU4YBCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=lab11%3A+ConvNet%EC%9D%84+TensorFlow%EB%A1%9C+%EA%B5%AC%ED%98%84%ED%95%98%EC%9E%90+%28MNIST+99%25%29\u0026author=Sung+Kim\u0026length_seconds=980,id=M853zrIwiJ4\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FM853zrIwiJ4%2Fhqdefault.webp\u0026session_data=itct%3DCBAQvU4YBSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=TF-KR+%EC%B2%AB+%EB%AA%A8%EC%9E%84%3A+Docker+%ED%99%98%EA%B2%BD%EC%97%90%EC%84%9C+TensorFlow%EB%A5%BC+%EC%84%A4%EC%B9%98%ED%95%98%EA%B3%A0+%EC%9D%91%EC%9A%A9%ED%95%98%EA%B8%B0\u0026author=Sung+Kim\u0026length_seconds=2842,id=eDKxY5Z5dVQ\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FeDKxY5Z5dVQ%2Fhqdefault.webp\u0026session_data=itct%3DCA8QvU4YBiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=lab9-2%3A+Tensor+Board%EB%A1%9C+%EB%94%A5%EB%84%A4%ED%8A%B8%EC%9B%8D+%EB%93%A4%EC%97%AC%EB%8B%A4%EB%B3%B4%EA%B8%B0\u0026author=Sung+Kim\u0026length_seconds=756,id=cKtg_fpw88c\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FcKtg_fpw88c%2Fhqdefault.webp\u0026session_data=itct%3DCA4QvU4YByITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=lec10-1%3A+Sigmoid+%EB%B3%B4%EB%8B%A4+ReLU%EA%B0%80+%EB%8D%94+%EC%A2%8B%EC%95%84\u0026author=Sung+Kim\u0026length_seconds=1050,id=YHsbHjTBx9Q\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FYHsbHjTBx9Q%2Fhqdefault.webp\u0026session_data=itct%3DCA0QvU4YCCITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=lec10-4%3A+%EB%A0%88%EA%B3%A0%EC%B2%98%EB%9F%BC+%EB%84%B7%ED%8A%B8%EC%9B%8D+%EB%AA%A8%EB%93%88%EC%9D%84+%EB%A7%88%EC%9D%8C%EA%BB%8F+%EC%8C%93%EC%95%84+%EB%B3%B4%EC%9E%90\u0026author=Sung+Kim\u0026length_seconds=309,id=573EZkzfnZ0\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2F573EZkzfnZ0%2Fhqdefault.webp\u0026session_data=itct%3DCAwQvU4YCSITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=lec9-2%3A++%EB%94%A5%EB%84%B7%ED%8A%B8%EC%9B%8D+%ED%95%99%EC%8A%B5+%EC%8B%9C%ED%82%A4%EA%B8%B0+%28backpropagation%29\u0026author=Sung+Kim\u0026length_seconds=1108,id=IiB6oElqCxA\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FIiB6oElqCxA%2Fhqdefault.webp\u0026session_data=itct%3DCAsQvU4YCiITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=TF-KR+%EC%B2%AB%EB%AA%A8%EC%9E%84%3A+CNN%EA%B3%BC+Data+Mutation%EC%9D%84+%EC%9D%B4%EC%9A%A9%ED%95%9C+Time+Series+Classification\u0026author=Sung+Kim\u0026length_seconds=3326,id=GYecDQQwTdI\u0026iurlhq_webp=%2F%2Fi.ytimg.com%2Fvi_webp%2FGYecDQQwTdI%2Fhqdefault.webp\u0026session_data=itct%3DCAoQvU4YCyITCI-M-KrB0M0CFQOKWAodcUAIxij4HTIJZW5kc2NyZWVuSO2jpNDVi8mr9QE%253D\u0026short_view_count_text=\u0026title=lec9-1%3A+XOR+%EB%AC%B8%EC%A0%9C+%EB%94%A5%EB%9F%AC%EB%8B%9D%EC%9C%BC%EB%A1%9C+%ED%92%80%EA%B8%B0\u0026author=Sung+Kim\u0026length_seconds=903"},
+
+
+
+          'BG_P': "5beIk3d7rDnqLSX2kT1S+E7BvWKQXNa90re0YXxIJZKQvDdD6HSJKxrehqByGoNJG9\/gglbI5KWvv\/v4RDdK8oezIEEzkXUsrEST0IU+GTi+4jQh7E52F8er9HzWslPplsXnST5LtHDkCeXrZm0SCCFwsXhC2ANyIhlsrJAjU3YitRuSpjcmaJHzvQtLB515ovut\/wmMe\/KY5pMQDurnyy90ribY4Kj+hrkzPw+zYnqEn4fAyrLatczE+DK2ewVDdwQLCfmE221Q9d0iwIrlKbV6zKrJ1xm2SCSJrTxzpjEdVH3CwyXLiC+vmtUK8XreJuxr\/O5TZe\/GfkuRELpJDQMH2+1SZ9J4VA21HT9aWgnBixxp7AKnDXQZKEUmukQ\/bmi+P+m2sSuxgX8AsUF2V3mu8Ht7ZJytMui7nx+rC\/Y4dIy0ya6biDqUWPFDhgJfTzxaqyDO0jhr1Hh\/zrQU311o8hvdR9FLvRKGfQymmyzy3X1JFf2rYdLroyQ7ZWUhb7QXvff+8DPmB4k3X4UJWEixmaewEigBnuBf6A+qDHTkwMUN7lFwJEq6sm6cEMBLB\/ZczhfOq286O6Do3YAmNvlH1bxHCiA3PLsxzwdfYSm8U5qfGmpKuGXVWC8Kuz5+4icnx6AyBvWjCfH+cLv46rJ6p+FV+Qqv\/PRrL1m+t80VVxcIB3sjSc0m7FfKyj+QWvd0l5oXJcxl2GPKqsSUDxNJ3GYXq22AHSFpk0Yp9qVxlHGSz4nHnS632PgAruSZhgi\/tWtSM5pS8F++1jtPhfhzPfaNJIp7N0UUlxGV5464pj+z2yKgbX39c5HK2\/i66AoB8nH87siu7zkjBTQydOks4o+V1KmBaFjBQ6cPY62r650TCkuY+Kg0t4I2HwkxJJHD3ANeOCaheGRGXx8cNOgDzkSp9Sbu4fnxPObTjZ0LYG\/eLFDfvUCa3Gsw891K3wFeG40AtHK3FOxVs37N319iAns003RrHYqZXNABhyTuv5r1B5vUn4Mz9SC+i\/XZNJHr8FtZSEo8rib2QQ01cGD2rvpFgM5s5MSR+ZqSAhfbNj1qGkhyB9EpuCeRpkcauRLbq2in7c1wyZMXao00Nr\/9UyqtwS4F\/Hr4urjRaMcpc95D2+LR2mabvOtZtcU1SISNjX2U8msFKl463bBDFV0ZViLw14x8s8QHKzdP2jw28cdXGLlOZHT9l\/G2H9Qpc\/gOGeAO1fv\/\/ePAOoD788j4KCWCHmZBuPtpQAT4RS+7vUJ3afI28AQSmzY3ADdQSF8B+ZGQMr4Z+OIOLjd\/9Tz1zenMb5JKwzuRVTGvOlRxs886+VDiX8JSNvtS1rDuma6E9qb7V+C12+C\/apj4YRA2IzqmqufNQ\/pDBEo4Hsun7ztVXa1KeMuQg+rwS\/gmQIv5f2xUuZlgQta4\/yhN1dAzZcZpdlJHF85FP6b5hfB\/hLDNEFNjBEdd80pj3HNmuHXk62Bquq1G3T3CelowKTo8nWyuFsyJeSpa3o+sOS\/mWp+0Dd\/O1iV03\/Be+otboZJtqYrxXoWP\/Hadpt09j2wd6MaCDcuvYtXHe5jLL+H0JdzoBaHnCHdCaQtDXWsy4GfuoJ\/3qIwwVqKFHul+GWMwj+JNPFQfX2kdoXLzx24gsrRt\/ZE80sdaYYLFSJTwSA53QuorLOjQ0T\/v8aqgr4iQI2HFLzEVeDtJ7YX8\/CjnnRXRrtNqmTr5EQRhAsYH1YnnovuDwUD9Dog1Ez6nD3RXVP5EbP3AcU5r+ikY+AxFnxj+Rq1RVLuZa4sL\/9+rVEP9gQaej9UUNIqbgsAQgJYaMxPDUO3Auyy7v8b5CsSLED42KQ4hGMcGT85A8LaYOFBTb93yAzlWY2RNW7KiUGXb0l50i3MU4wqp9eEq1NigzckjNP108kbO7RGMNKtIu\/TVM3z3K\/9EKd\/jNFtG859MyLaRbnjkhg9b6lIbop0i9OxvJlAIEiL1\/N5F+zs4wAv9ijctR8xDo2zGhb5ibiemMcmQj9ZkdEYAPNRiAXxes137JozKZhYLWg+y\/GsvDMOdq0wapzligtOrAN5wVBE95bgTpFzaRQrmZ852S5uP6SsRj0aFQ+T57OAqwVtOYUSfKcEPyyr8ceSmoOhdnHjFMAKpCxZvzxafUAs2zOy4M1kzYgYmlvE4fubmdZ0WiW18kCgHjZRhowUqLydstmnJPXDEZFVpeNZucTkGyHSjeaxnYOSCIe9B8DMTvq3jWWXgN\/j1B+qKSo4OZuwyw8AxQmpj82k6G+wayuyZMz5bSOtDNPukxkaAt4I0ww57YbZQBNkXj5EYlnsYED4zWwS6\/AI78\/7uGyIRUvuqY8Lg7QU9b2EoLBeTPi7SqiYkSq+QlSs7wqg0oMZ\/tonxvf\/Tlbprz3543xOqE4n8AOTh2Sn3of0y5LOKY6SEcovVNFUYhP+OGyktFj5UUQ4oQPdo38mVJfNqAaZbUHFhjnC8l\/lfEN1EzY+t4sloX3HjH3EuCekBRsoymzXzsb+I6mdnoOSJAMfCayaiM9j5jPwzLMPhFljEx7g++nrDlM6WLo\/cvS9tokv2rizVmNo3+xvYRmn4yXnt6lXPf+\/iUkh2BoOaBMVJDV5RFhLxKjGUJrYH8DW1011bSPW1uFXOT4L5E\/VyzN4x9htkk0C7NgdQCw+XUvIKTGYDVDJHvmMjJb1Qk7KZrXa9jE3kA\/4wpRm7KPPE4E\/EbTRUS1TSqR52eFIXRZxbCRGf4YeSdm6EI4o3biEnD0IXSnLfUUjuiMg1gPQO6lQRpJtS1CH0Os8oN5\/o7E51IYmhwHpsQiAZNFlPF1LAW3yI1rQcebeT8Qdxyo+MkKexLN3PWid8iXr2MB2qAlRqlj2S5+ufsDvvCyAYSQNls9uLFVwUDYVgRt\/SkhMa2b6zmXoVK8+YscMZuxdtUucRGN1lHaclgS8R\/iry2nP7ustHgqMv3cOF5b19hhuDYEkV4bgiSPpFQPEfIiaLRds+eMZkt6mm7\/HDGK9xYgg3bTj\/kyr5BsBBTu8DbKjbAf7DkcT+f3QIfKdBUUxieouyGiakM2iy5D5SJYo88BzJkUXryeBH2yPW24Q8atlbBLsRZ8UtW98L\/\/mwAzj7y3ZtwagpeiqAkC0q3AjlTT0z8vJKySDL6C6vdLhVF9v9DF7rPq2xShX5bxZ\/H0A4WlyI9LJQ7ErfqexUG558pFahC2bEW0f3Su0UU+4XLpTXBxnCDNRzYgr5d3Hj9EmKuR7c7erB\/QZGECUUBIAWpm\/zbAxzNvCyyQgWtCiOfquA603JWFYkK6tHPWiQ5hXKsM1lnuW\/Es46zxvpSl3UGe1slWA5yBbUlv20DJAYxKo3UbLnLu\/iflC7Rn\/Da8LLMmcsbYLrXiWZS9uY+KMC8QtFMtB5gbSqkVQyagG2qIhsINfkwWSVFuHD0ZrH3QnWYKfKFqZzyJ1VO3garrk\/P61JayEWRYxDUHyzoA3K3stTYiWdVpqWbhdN+80\/Y88koZQHSCUj+w\/Xq27uleJIMci6bIEZzoDpp5\/Oqjc4cuPdicYnvtkWzIRdnFsTUl54Lk1812XAjkrAi1P1iJpdSJlL0R8r7rs4amc9sQIlxXiH801NM\/U9pU59o4Af7foNkOxK18\/Pqt\/+9CHwXYc6QkcU\/A+qbLecDjqATMSShph9iAIvW29Nx\/H4LWFHfG24kc5ZjNDODXYez5enuRuNHBVSDYKjslqB9YbROS0G3lKPELflU65tHxo24HcCk+PNHoLWPkdXlW3i+jjuW5jl3VytMiWzfbB0++hJuUCj5L319XUm5OnT3C4XgZgXsGpmOyiV209jnbOB9VUSyhg3Hvo3fn2k+vPpJmB9BFx5rnBZjvK411rRAq4lNu3Up5lsPTdkNgE4E5WHGCeFIkhQiXIV685UG1vhIOonwNPWjfyQnhcQujsbZGMmzk4URW2GSzykibP0X+8xtsiXjrBqkeOMrDIFgFsIL6Ke4lzUiv2fGRlFjDxocboZ9UJDjn3t6hhdGRMma49U+xt8f82WDDA0EdUJS+sCIVPhJvj6Odph2ykK\/tWwP9QQxPhJQ1hWdwuFSDCtz6OiXMuEpRUn3Rd9d95K0xnOrcAB1ZkkuDNtJGC7dJnLUCvw\/t60mycig\/y5IF6sZHOqwO3UFL87pxHxqwZ3jD2YQeV6sYhoJh9SAqgXam\/2iZAoUcXUSEmsK3p2mWW0YOZTAoOVigwP2DVV3wl7JZar1v\/gVdUBzb3VE9XYShB8Fp5+25jFkNrOE1Qiri2spcxg0UWY2WeFOEomkC10suL8rHEiJkU9jGI2MJrFaxwaE66hJ\/9iyfrHU8RmzKm5ls499Pm8zyJbYpvZEYJhqkWc+bpRxfHB32cL53yAOagt1Gm6q4A77sRq1ksjZiCGQG0b4N76wloiIiPf1HDmbO9bTAzWejUw92vfGBiDfv7grne00DTBVCZLcSJfyoG7Apnmi284nX2Y0s8zihZOW6bV7myfFiMoOMNOPIZP9lWPWdeqVUePf4zvUf4TAPRMM1pyk+ElpzHY+hpyCxwvQ4P3EPYcHgJtBiLb59Y2stJvnYlwPPnI9qaiWJuVl8NRJq+FLLXwLhqqWLSXQdd9r1KXIRYUbBMDWXALNIO19YnA8Yf07LuUwk0RbBhgh+y0IIWyZfWVz08CUXM8PK3jWWUEZeVqiWEvEdOE5yZGWQ\/YjOcP+RdtESLse4R20zNjJwRoQPMx82waCurJnsTOdZwR510GiGtIRmUfersWdqcxSMXQGGyadBEF7sDsPdABTTfKwiqwXa2wa91gjvlF7wJHZ4wuIs\/d4qNm2RQtgD89HE6oHVWRQBau3jCxjaQErArdW7c\/cmR9\/F+C7c\/YsNqwLk05Vjrm9q3gm+LsDHvlO5hGX9FADysuSNkuqwiFau2KFoOWAuADeAX4pxIbDMuec\/Q6+hPpdkCXUc2a\/OVtXwhlnv7Y7JZR\/rPELrRIXTnOu24RWP7IYpTb4vaRuYB402rcckTZae5XaGjhzsqq3fAVSGwP0teehBzTGu4Ym6YSm0rAO6WzNL5Y+2Y7NupWC0USNhuHjR1wKkTPWeE7CqQ0TiEo5ZUvdLrQPaRbkYXQxb+5tfZ4iPaFBZIdD0ztaLkWUmhK+1QO7bfGVOmPnKaSDq592JPAdJi+Vs2VfpKVbSnoYlNgS8MaSdaTxKHMVTl1gxtyxOnDhcrwerxGVOTOvx91ya8VybXxNgZQ6sc8N1CIjofjvp+qfpqFgA9keQmNpSNqqhQGPxvsV3zjSPrCCYt9KQLgMhOOLN8dpOfF5oxMYUets8MCuqqwU7ruqGlPJW9OM1s4eK5LcmOD2gBSWmVNaTKOdMI5Et9YQkxj5j3F1nvnF6jYSt4B8\/0Yx4OE5Ct8EBfK+11iFRi9TQl9uq8PdnP0ElFJxmHiWrdY6LBxp4RIlp3cWpWUq2wHoUt9q4HtojnODHC1VeZVxswCIwz2Nw248mZvHgRnVP8j9hNXvRjooR8Vblw2caSVuqPkqWj9JgH1fSHuvLMDSPmRYt1FhujTSmsE6ABnQuBk0sKz2JuOCGm\/4RIxyvTNmmbkimWKsqD\/0KOtXq0Y0KyGib7\/b1ZHzTwfX9dLeLhx4tWfaqNkHwgPLPFff\/oSiqI\/9Bzh\/HmHnQMk08clrYFxdVoQgVKdxthl0NUcqe42dF+HiwDJbQqXPIrWdNJ5In16r0qbmDRwSDzwtVuOUlJTn9oATF2SyEHilftGQddlAIHIrQm7KdIA2UY1bRfbRzCkIyq8ME5ZR+ocNigBf1SNCikopL3lV1G1iR1SBm1uBEdIDVcYuse3RwwiaG8UDhoAYZdBkIa2pfPxhm171LFcRVD712hPN\/0pJsO2LSVekiR\/vTtrMZVrIY18Q5VDUDpOQxAEwiwwJjc+x5GrH8SsFWxVJDfPoIbBTcULglAForsowvmkNLivE7uj6TmZJW17m8QuAAE23iZD7XnYLycTaQbz\/huRzvkdoYX4s3nS006K9JOMi6eShw3LQUAQzr+i4j+994dr5jEYaCvCJvKeaqxFYEn1uZxBe9IGJAIOS3YIe6U4bT91FvFI\/v3oGatLsz7R4+HS\/cGkBrC9jRYr30ut1YY1lVEAC0O3PJiHXnYHvvwGO\/myPLY+w\/V8843wgrZeMPxCs7ZWqkf0SoY67DSqUau9w26uTeyN6rFXFAPa4ku0jDAG1TvHslumnBKVLxiMcf61cQ30qdND00zUeLCHrrkw9E6mHL2DOZUku2s\/4G86B\/eWSzUb+xUmBMgf9JKfeix2MXhv42a3NAwYFeVo+lIQd3Z8jX8sFm0+ppGrT7CuWwSkVTkJVfPi+akUKrl8mlkT+jz4QBoU1sY5JbFQNt20DGOP4TtGX4e\/9drdPqDAxyWWXbU39X41Ubt5dezRcLHSquWcnEB1HaaljqfaSv8mxY4gQy68azU\/4ZtG38tfqZxBkRdbdebTB6hFgWR1SdtpaZJVP\/fTCrG+htZmsGQUkZRNeBYSk3COl0gfLsVE3j2ggI9gYY\/xb8wHtuMVHDe8lqm7o9Z2mFpmavNbPONvV40SZuYIZwPKg8NFG1GFLBBTg\/+vW3oiwb6r4glfV98vxpdfNTvIcbVNMvjRxSEQNCg7t\/VUiOF8EdOCJhDzmuXe+a+TSbVYeruhK3wqgZlRmUAMZc3yV2HQODSysh\/gixAb2lto\/Ag9uTrGukBOhQeL3E07kvGUDg17EC758Z6UtH4mH3v6puC0\/zi71Jl3swH1hKRNCnkAfQKXzV\/C7X5D1zJF6Lel+xAR8mW005sAc9MjuDVO5QZRkYsI7BLexOoIMaa4Qf0A0MBi32GOvj0zTMLFy\/D\/mvbhihCDNB8fQHmehhFQygaF30F8bU7LpOOw4pyDYS7N0Qrzxh2APgKQPLeCcsyj1lFIMzil\/VD6SbBCdCK+C+eo8\/CdIi1ykZjEA1uNMxiuXYwRZpEIdoWSxgIhAHpFhzvPeVDKtBSccyWItbNEaeXD4kHIo9WBGgaI\/NsJqMckc8+k1jlN4LecCY3baubYwXoQL2He0krc1L17SCjD+Po2hghU8TgGqkfpJl\/UbfZSTa+gby3ZaoV+h0BzUJ0kJAPYjQplNDbiXBBFpW3Ln714qUqo6i+tvi+vGZnQSoZ2aMhyNz+1pr6\/AVZQVRwVU0W5tpi8MI3vwbGLYUG0QvQhI1wNMIbcEdT3hR0LnyZ+zk\/0TsAxHBk\/poF47Aw5Uv9olt2S3\/JFpRmxQz+LAjg3D0zGrLkz5e1mLnH+KwspnbzS6jkgnhvS4UjYXyM5xOkGaTyxWnWFqRHL9nLyblQ\/chLx5vKDsXxp8MvAttxKX0yizRNl00EjEt8OdtKzgaaW+L3aTqTZjyP1jc\/H2cQ+1y8azL3tM7wdbL+MgkWCopBssU9mNL6pUdDfVExYtWVuXOi60pPTXzAJkuRb308MG9O8zP32Up0PLFzlsJIBXeSfFP9AZpxlxlczVo1MRuGZS6XWnPzqgGnMnDtrKjzMEU5yF\/98dnWhsEY\/T3LKe7FQ1PoiUwUKPwY8\/JUO",
+          'BG_IU': "\/\/www.google.com\/js\/bg\/x9qk1Wce_HQSyeAH3YRM5BBD0Or5cRMPVkpRSNqmmDs.js",
+
+
+
+        'COMMENTS_TOKEN': "EhYSCzlWY2tYVm9KRWUwwAEAyAEA4AEBGAY%3D",
+
+      'GET_PLAYER_EVENT_ID': "XXZ1V8_pJYOU4gLxgKGwDA",
+      'HL_LOCALE': "ko_KR",
+      'TTS_URL': "https:\/\/www.youtube.com\/api\/timedtext?expire=1467341005\u0026caps=asr\u0026v=9VckXVoJEe0\u0026hl=ko_KR\u0026sparams=asr_langs%2Ccaps%2Cv%2Cexpire\u0026asr_langs=ru%2Ces%2Cko%2Cit%2Cpt%2Cde%2Cfr%2Cja%2Cnl%2Cen\u0026signature=42BAB1A064AB2B3A97B300747A5AC12B30DFC774.F1A827A80BDC6B75CC9280D2D01FADD49DF40D65\u0026key=yttt1",
+      'JS_DELAY_LOAD': 0,
+      'LIST_AUTO_PLAY_VALUE': 1,
+      'SHUFFLE_VALUE': 0,
+      'SKIP_RELATED_ADS': false,
+      'SKIP_TO_NEXT_VIDEO': false,
+      'RESUME_COOKIE_NAME': null,
+      'CONVERSION_CONFIG_DICT': {},
+      'RESOLUTION_TRACKING_ENABLED': false,
+      'MEMORY_TRACKING_ENABLED': false,
+      'NAVIGATION_TRACKING_ENABLED': false,
+      'WATCH_LEGAL_TEXT_ENABLE_AUTOSCROLL': false,
+      'SHARE_ON_VIDEO_END': true,
+      'SHARE_ON_VIDEO_START': false,
+      'ADS_DATA': {"afc_vars":{"ad_client":"","ad_type":"","video_doc_id":"","loeid":"","tag_for_child_directed_treatment":"","ad_host_tier_id":"","eids":[],"language":"","core_dbp":"","format":"","ad_channel":"","ad_host":"","targeting":"","ad_block":"","lact":"","alternate_ad_url":"https:\/\/www.youtube.com\/ad_frame?id=watch-channel-brand-div"},"show_pyv":false,"pyv_vars":{"iframe_json":"{\"google_ad_host\":\"\",\"google_core_dbp\":\"\",\"google_ad_type\":\"\",\"google_ad_block\":\"\",\"google_ad_channel\":\"\",\"google_cust_gender\":\"\",\"google_video_url_to_fetch\":\"\",\"google_ad_host_tier_id\":\"\",\"google_max_num_ads\":0,\"google_page_url\":\"\",\"google_yt_pt\":\"\",\"google_video_doc_id\":\"\",\"google_cust_age\":\"\",\"google_lact\":\"\",\"google_tag_for_child_directed_treatment\":\"\",\"google_ad_client\":\"\",\"google_targeting\":\"\",\"google_eids\":\"\",\"google_ad_output\":\"\",\"google_only_pyv_ads\":false,\"google_language\":\"\",\"google_loeid\":\"\"}"},"use_gut":false,"afv_vars":{"google_ad_host":"","google_core_dbp":"","google_ad_type":"","google_ad_block":"","google_ad_channel":"","google_cust_gender":"","google_ad_host_tier_id":"","google_ad_height":"","google_loeid":"","google_page_url":"","google_yt_pt":"","google_video_doc_id":"","google_lact":"","google_ad_format":"","google_tag_for_child_directed_treatment":"","google_ad_client":"","google_alternate_ad_url":"https:\/\/www.youtube.com\/ad_frame?id=watch-channel-brand-div","google_targeting":"","google_eids":[],"google_cust_age":"","google_language":"","google_scs":""},"check_status":false,"show_instream":false,"show_afv":false,"gut_vars":{"tag":""},"show_afc":false},
+      'PLAYBACK_ID': "AAU2hBVgIo2NRLWy",
+      'IS_DISTILLER': true,
+      'SHARE_CAPTION': null,
+      'SHARE_REFERER': "",
+      'PLAYLIST_INDEX': null
+    });
+
+
+    yt.setMsg({
+      'EDITOR_AJAX_REQUEST_FAILED': "서버에서 데이터를 가져오는 동안 오류가 발생했습니다. 다시 시도하거나 페이지를 새로고침하세요.",
+      'EDITOR_AJAX_REQUEST_503': "지금은 이 기능을 사용할 수 없습니다. 나중에 다시 시도해 보세요.",
+        'HTML5_SUBS_ASR': "자동 자막",
+      'LOADING': "로드 중..."    });
+
+      yt.setMsg('SPEEDYG_INFO', "동영상 중단 현상이 발생합니까?");
+
+      yt.setMsg({
+    'UNBLOCK_USER': "이 사용자 차단을 취소하시겠습니까?",
+    'BLOCK_USER': "이 사용자를 차단하시겠습니까?"
+  });
+  yt.setConfig('BLOCK_USER_AJAX_XSRF', 'QUFFLUhqa1FyY0RIa1JHQ0JEMWNwbkk5LUU2ajJiRDZ2Z3xBQ3Jtc0tsZ1AtTjlOelV5dWhnVHVqUmFfTXJfYlhZeHhRZ3ZoaW1GOU15YnFsZHMwaldpZ3NuaUdvcG1HUG56T0pzWF9jb0RDa1NIVnZMOU9mMTdvSTFtZTR0RGtHaVBuTTJjQjdWcXJULXJ6ZngxXzZUYktUNmVGSUphV0o4NHp0NGpiWS1CamFUQVk5ZlVQVzJqaEZyeTBlQmtJQnU0M0E=');
+
+
+    
+
+
+
+
+
+
+
+    
+
+      yt.setConfig({
+    'GUIDED_HELP_LOCALE': "ko_KR",
+    'GUIDED_HELP_ENVIRONMENT': "prod"
+  });
+
+
+  </script>
+
+    <iframe style="display:none;" src="//p2-gldqyjqudi6le-q2yns7r54esjt543-if-v6exp3-v4.metric.gstatic.com/v6exp3/iframe.html"></iframe>
+
+<script>yt.setConfig({APIARY_HOST: "",GAPI_HINT_PARAMS: "m;\/_\/scs\/abc-static\/_\/js\/k=gapi.gapi.en.PQWOXwGAyXQ.O\/m=__features__\/rt=j\/d=1\/rs=AHpOoo-SsKefX_tnkYaztI7tux9JZAkUgw",APIARY_HOST_FIRSTPARTY: "",INNERTUBE_CONTEXT_CLIENT_VERSION: "1.20160628",INNERTUBE_API_KEY: "AIzaSyAO_FJ2SlqU8Q4STEHLGCilw_Y9_11qcW8",INNERTUBE_API_VERSION: "v1",'VISITOR_DATA': "Cgs3VUR4aXczUUk3VQ%3D%3D",'GAPI_HOST': "https:\/\/apis.google.com",'GAPI_LOCALE': "ko_KR",'INNERTUBE_CONTEXT_HL': "ko",'INNERTUBE_CONTEXT_GL': "KR",'XHR_APIARY_HOST': "youtubei.youtube.com"});yt.setConfig({'EVENT_ID': "XXZ1V8_pJYOU4gLxgKGwDA",'PAGE_NAME': "watch",'LOGGED_IN': true,'SESSION_INDEX': 0,'VALID_SESSION_TEMPDATA_DOMAINS': ["www.youtube.com","gaming.youtube.com"],'PARENT_TRACKING_PARAMS': "Mgh5b3V0dS5iZQ==",'FORMATS_FILE_SIZE_JS': ["%sB","%sKB","%sMB","%sGB","%sTB"],'DELEGATED_SESSION_ID': null,'ONE_PICK_URL': "",'UNIVERSAL_HOVERCARDS': true,'GOOGLEPLUS_HOST': "https:\/\/plus.google.com",'PAGEFRAME_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-pageframe-vflqSFn6Q\/www-pageframe.js",'GAPI_LOADER_URL': "\/\/s.ytimg.com\/yts\/jsbin\/www-gapi-loader-vflBI8f7J\/www-gapi-loader.js",'JS_COMMON_MODULE': "\/\/s.ytimg.com\/yts\/jsbin\/www-en_US-vflqKVo7o\/common.js",'PAGE_FRAME_DELAYLOADED_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-pageframedelayloaded-webp-vflw6SMRa.css",'EXPERIMENT_FLAGS': {"gfeedback_for_signed_out_users_enabled":true,"enable_server_side_ad_request_for_embeds":true,"consent_url_override":"","legacy_cast2":true,"enable_server_side_search_pyv":true,"log_window_onerror_fraction":0.1,"beacon_abandoned_only":true,"player_swfcfg_cleanup":true,"enable_negative_ticks":true,"block_spf_search_ads_impressions":true},'GUIDE_DELAY_LOAD': true,'GUIDE_DELAYLOADED_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-guide-webp-vflFBob5d.css",'GUIDED_HELP_PARAMS': {"logged_in":"1","creator_channel_id":"UCin9tmc3xauaCjHAcAlfGtQ"},'HIGH_CONTRAST_MODE_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-highcontrastmode-webp-vflRwkhPC.css",'PREFETCH_LINKS': false,'PREFETCH_LINKS_MAX': 1,'PREFETCH_AUTOPLAY': false,'PREFETCH_AUTOPLAY_TIME': 0,'PREFETCH_AUTONAV': false,'PREBUFFER_MAX': 1,'PREBUFFER_LINKS': false,'PREBUFFER_AUTOPLAY': false,'PREBUFFER_AUTONAV': false,'WATCH_LATER_BUTTON': "\n\n  \u003cbutton class=\"yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button video-actions spf-nolink hide-until-delayloaded addto-watch-later-button yt-uix-tooltip\" type=\"button\" onclick=\";return false;\" title=\"나중에 볼 동영상\" role=\"button\" data-video-ids=\"__VIDEO_ID__\"\u003e\u003c\/button\u003e\n",'WATCH_QUEUE_BUTTON': "  \u003cbutton class=\"yt-uix-button yt-uix-button-size-small yt-uix-button-default yt-uix-button-empty yt-uix-button-has-icon no-icon-markup addto-button addto-queue-button video-actions spf-nolink hide-until-delayloaded addto-tv-queue-button yt-uix-tooltip\" type=\"button\" onclick=\";return false;\" title=\"대기열\" data-style=\"tv-queue\" data-video-ids=\"__VIDEO_ID__\"\u003e\u003c\/button\u003e\n",'WATCH_QUEUE_MENU': "  \u003cspan class=\"thumb-menu dark-overflow-action-menu video-actions\"\u003e\n    \u003cbutton aria-haspopup=\"true\" type=\"button\" class=\"yt-uix-button-reverse flip addto-watch-queue-menu spf-nolink hide-until-delayloaded yt-uix-button yt-uix-button-dark-overflow-action-menu yt-uix-button-size-default yt-uix-button-has-icon no-icon-markup yt-uix-button-empty\" onclick=\";return false;\" aria-expanded=\"false\" \u003e\u003cspan class=\"yt-uix-button-arrow yt-sprite\"\u003e\u003c\/span\u003e\u003cul class=\"watch-queue-thumb-menu yt-uix-button-menu yt-uix-button-menu-dark-overflow-action-menu hid\"\u003e\u003cli role=\"menuitem\" class=\"overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-next yt-uix-button-menu-item\" data-action=\"play-next\" onclick=\";return false;\"  data-video-ids=\"__VIDEO_ID__\"\u003e\u003cspan class=\"addto-watch-queue-menu-text\"\u003e다음 동영상 재생\u003c\/span\u003e\u003c\/li\u003e\u003cli role=\"menuitem\" class=\"overflow-menu-choice addto-watch-queue-menu-choice addto-watch-queue-play-now yt-uix-button-menu-item\" data-action=\"play-now\" onclick=\";return false;\"  data-video-ids=\"__VIDEO_ID__\"\u003e\u003cspan class=\"addto-watch-queue-menu-text\"\u003e지금 재생\u003c\/span\u003e\u003c\/li\u003e\u003c\/ul\u003e\u003c\/button\u003e\n  \u003c\/span\u003e\n",'SAFETY_MODE_PENDING': false,'I18N_PLURAL_RULES': function(n) { return 'other'; },'LOCAL_DATE_TIME_CONFIG': {"months":["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],"firstDayOfWeek":0,"dateFormats":["yyyy'년 'MM'월 'd'일 'H:mm","yyyy'년 'MM'월 'd'일'","yyyy. MM. d.","yyyy. MM. d."],"amPms":null,"shortWeekdays":["일","월","화","수","목","금","토"],"formatLongDate":"yyyy'년 'MM'월 'd'일 'H:mm","shortMonths":["1월","2월","3월","4월","5월","6월","7월","8월","9월","10월","11월","12월"],"firstWeekCutoffDay":3,"weekendRange":[6,5],"formatShortTime":"H:mm","weekdays":["일요일","월요일","화요일","수요일","목요일","금요일","토요일"],"formatShortDate":"yyyy. MM. d.","formatWeekdayShortTime":"EE H:mm","formatLongDateOnly":"yyyy'년 'MM'월 'd'일'"},'PAGE_CL': 126064855,'PAGE_BUILD_LABEL': "youtube_20160628_RC1",'VARIANTS_CHECKSUM': "88c48565688bff270a941834081f0a90",'ROOT_VE_TYPE': 3832,'CLIENT_PROTOCOL': "h2",'CLIENT_TRANSPORT': "quic",'MDX_ENABLE_CASTV2': true,'MDX_ENABLE_QUEUE': true,'SANDBAR_ENABLED': true,'SANDBAR_LOCALE': "ko-KR",'FEEDBACK_BUCKET_ID': "Watch",'FEEDBACK_LOCALE_LANGUAGE': "ko",'FEEDBACK_LOCALE_EXTRAS': {"experiments":"9405964,9406852,9415398,9415575,9416126,9416475,9416891,9417035,9417482,9418543,9419451,9419979,9420112,9420289,9421041,9422250,9422523,9422596,9422928,9423553,9423555,9424603,9424678,9425413,9425506,9425648,9425931,9426977,9427175,9427440,9428398,9430082,9430877,9431012,9431453,9432931,9432939,9433096,9433380,9433614,9433839,9433870,9433946,9434686,9434922,9434949,9435022,9435521,9435526,9435616,9435729,9435876,9436339,9436603,9436607,9436971,9436976,9437066,9437081,9437087,9437553,9437673,9437762,9437976,9437979,9438150,9438260,9438662,9438965,9439034,9439036,9439384,9439451,9439652,9439932,9440149,9440182,9440380,9440523","is_partner":false,"logged_in":true,"accept_language":"ko-KR,ko;q=0.8,en-US;q=0.6,en;q=0.4"}});   yt.setConfig({
+    'GUIDED_HELP_LOCALE': "ko_KR",
+    'GUIDED_HELP_ENVIRONMENT': "prod"
+  });
+yt.setConfig('SPF_SEARCH_BOX', true);yt.setMsg({'ADDTO_CREATE_NEW_PLAYLIST': "새 재생목록 만들기\n",'ADDTO_CREATE_PLAYLIST_DYNAMIC_TITLE': "  $dynamic_title_placeholder(새로 만들기)\n",'ADDTO_WATCH_LATER': "Watch Later",'ADDTO_WATCH_LATER_ADDED': "추가됨",'ADDTO_WATCH_LATER_ERROR': "오류",'ADDTO_WATCH_QUEUE': "Watch Queue",'ADDTO_WATCH_QUEUE_ADDED': "추가됨",'ADDTO_WATCH_QUEUE_ERROR': "오류",'ADDTO_TV_QUEUE': "Queue",'ADS_INSTREAM_FIRST_PLAY': "동영상 광고 재생 중입니다.",'ADS_INSTREAM_SKIPPABLE': "동영상 광고를 건너뛸 수 있습니다.",'ADS_OVERLAY_IMPRESSION': "광고가 표시되었습니다.",'MASTHEAD_NOTIFICATIONS_LABEL': {"other": "\uc77d\uc9c0 \uc54a\uc740 \uc54c\ub9bc #\uac1c", "case0": "\uc77d\uc9c0 \uc54a\uc740 \uc54c\ub9bc \uc5c6\uc74c", "case1": "\uc77d\uc9c0 \uc54a\uc740 \uc54c\ub9bc 1\uac1c"},'MASTHEAD_NOTIFICATIONS_COUNT_99PLUS': "99+"});    yt.setConfig({
+    'XSRF_TOKEN': "QUFFLUhqa1FyY0RIa1JHQ0JEMWNwbkk5LUU2ajJiRDZ2Z3xBQ3Jtc0tsZ1AtTjlOelV5dWhnVHVqUmFfTXJfYlhZeHhRZ3ZoaW1GOU15YnFsZHMwaldpZ3NuaUdvcG1HUG56T0pzWF9jb0RDa1NIVnZMOU9mMTdvSTFtZTR0RGtHaVBuTTJjQjdWcXJULXJ6ZngxXzZUYktUNmVGSUphV0o4NHp0NGpiWS1CamFUQVk5ZlVQVzJqaEZyeTBlQmtJQnU0M0E=",
+    'XSRF_REDIRECT_TOKEN': "02UouwT9hdaA5OT6swLA-h30r498MTQ2NzQwMjIwNUAxNDY3MzE1ODA1",
+    'XSRF_FIELD_NAME': "session_token"
+  });
+
+  yt.setConfig('FEED_PRIVACY_CSS_URL', "\/\/s.ytimg.com\/yts\/cssbin\/www-feedprivacydialog-webp-vfluUSPqW.css");
+
+  yt.setConfig('FEED_PRIVACY_LIGHTBOX_ENABLED', true);
+yt.setConfig({'SBOX_JS_URL': "\/\/s.ytimg.com\/yts\/jsbin\/www-searchbox-legacy-vflJTm7rV\/www-searchbox-legacy.js",'SBOX_SETTINGS': {"HAS_ON_SCREEN_KEYBOARD":true,"REQUEST_DOMAIN":"kr","PSUGGEST_TOKEN":"O_g9aCQZdsZp13UUNBX_bA","EXPERIMENT_ID":-1,"EXPERIMENT_STR":"ytd_arm_1","REQUEST_LANGUAGE":"ko","SESSION_INDEX":0,"IS_FUSION":false,"PQ":""},'SBOX_LABELS': {"SUGGESTION_DISMISSED_LABEL":"추천 검색어 삭제됨","SUGGESTION_DISMISS_LABEL":"삭제"}});  yt.setConfig({
+    'YPC_LOADER_JS': "\/\/s.ytimg.com\/yts\/jsbin\/www-ypc-vflmSgYYx\/www-ypc.js",
+    'YPC_LOADER_CSS': "\/\/s.ytimg.com\/yts\/cssbin\/www-ypc-webp-vfl5CgcDc.css",
+    'YPC_SIGNIN_URL': "https:\/\/accounts.google.com\/ServiceLogin?uilel=3\u0026service=youtube\u0026hl=ko\u0026authuser=0\u0026continue=http%3A%2F%2Fwww.youtube.com%2Fsignin%3Fauthuser%3D0%26hl%3Dko%26action_handle_signin%3Dtrue%26next%3D%252F%26app%3Ddesktop\u0026passive=true",
+    'DBLCLK_ADVERTISER_ID': "2542116",
+    'DBLCLK_YPC_ACTIVITY_GROUP': "youtu444",
+      'YPC_MB_FLOW': true,
+    'SUBSCRIPTION_URL': "\/subscription_ajax",
+    'YPC_SWITCH_URL': "\/signin?authuser=0\u0026feature=purchases\u0026skip_identity_prompt=True\u0026next=%2F\u0026action_handle_signin=true",
+    'YPC_GB_LANGUAGE': "ko_KR",
+    'YPC_GB_URL': "https:\/\/checkout.google.com\/inapp\/lib\/buy.js",
+    'YPC_MB_URL': "https:\/\/payments.google.com\/payments\/v4\/js\/integrator.js?ss=md",
+    'YPC_TRANSACTION_URL': "\/transaction_handler",
+    'YPC_SUBSCRIPTION_URL': "\/ypc_subscription_ajax",
+    'YPC_POST_PURCHASE_URL': "\/ypc_post_purchase_ajax",
+    'YTO_GTM_DATA': {'event': 'purchased', 'purchaseStatus': 'success'}
+  });
+  yt.setMsg({
+    'YPC_OFFER_OVERLAY': "      \u003cdiv id=\"ypc-offer-overlay\" class=\"yt-uix-overlay\"\u003e\n      \u003cspan class=\"yt-uix-overlay-target\"\u003e\u003c\/span\u003e\n          \u003cdiv class=\"yt-dialog hid \"\u003e\n    \u003cdiv class=\"yt-dialog-base\"\u003e\n      \u003cspan class=\"yt-dialog-align\"\u003e\u003c\/span\u003e\n      \u003cdiv class=\"yt-dialog-fg\" role=\"dialog\"\u003e\n        \u003cdiv class=\"yt-dialog-fg-content\"\u003e\n          \u003cdiv class=\"yt-dialog-loading\"\u003e\n              \u003cdiv class=\"yt-dialog-waiting-content\"\u003e\n      \u003cp class=\"yt-spinner \"\u003e\n        \u003cspan class=\"yt-spinner-img  yt-sprite\" title=\"로드 중 아이콘\"\u003e\u003c\/span\u003e\n\n    \u003cspan class=\"yt-spinner-message\"\u003e\n로드 중...\n    \u003c\/span\u003e\n  \u003c\/p\u003e\n\n  \u003c\/div\u003e\n\n          \u003c\/div\u003e\n          \u003cdiv class=\"yt-dialog-content\"\u003e\n            \u003cdiv class= \"ypc-offer-overlay-container\"\u003e\u003ca href=\"#\" class=\"ypc-offer-overlay-close\"\u003e\u003c\/a\u003e\u003cdiv class=\"ypc-offer-overlay-content-wrapper clearfix\"\u003e\u003c\/div\u003e\u003cdiv class=\"ypc-offer-overlay-loading\"\u003e  \u003cspan class=\"yt-large-spinner-img yt-sprite\" title=\"로드 중 아이콘\"\u003e\u003c\/span\u003e\n\u003c\/div\u003e\u003cdiv class=\"ypc-offer-overlay-error\"\u003e\u003ch3\u003e오류\u003c\/h3\u003e\u003cp class=\"ypc-offer-overlay-error-generic-content\"\u003e오류가 발생했습니다. 나중에 다시 시도해 주세요.\u003c\/p\u003e\u003cp class=\"ypc-offer-overlay-error-custom-content\"\u003e\u003c\/p\u003e\u003c\/div\u003e\u003cdiv class=\"ypc-offer-overlay-not-available-error\"\u003e\u003ch3 class=\"ypc-offer-overlay-not-available-title\"\u003e구매한 동영상을 사용할 수 없습니다.\u003c\/h3\u003e\u003cp class=\"ypc-offer-overlay-not-available-content\"\u003e\u003c\/p\u003e  \u003cdiv class=\"ypc-offer-overlay-not-available-action yt-uix-overlay-actions\"\u003e\n    \u003cbutton class=\"yt-uix-button yt-uix-button-size-default yt-uix-button-primary yt-uix-overlay-close\" type=\"button\" onclick=\";return false;\"\u003e\u003cspan class=\"yt-uix-button-content\"\u003e닫기\u003c\/span\u003e\u003c\/button\u003e\n  \u003c\/div\u003e\n\u003c\/div\u003e\u003cdiv class=\"ypc-offer-overlay-tip-not-available-error\"\u003e\u003ch3 class=\"ypc-offer-overlay-not-available-title\"\u003e팁을 제공할 수 없음\u003c\/h3\u003e\u003cp class=\"ypc-offer-overlay-tip-not-available-content\"\u003e\u003c\/p\u003e  \u003cdiv class=\"ypc-offer-overlay-not-available-action yt-uix-overlay-actions\"\u003e\n    \u003cbutton class=\"yt-uix-button yt-uix-button-size-default yt-uix-button-primary yt-uix-overlay-close\" type=\"button\" onclick=\";return false;\"\u003e\u003cspan class=\"yt-uix-button-content\"\u003e닫기\u003c\/span\u003e\u003c\/button\u003e\n  \u003c\/div\u003e\n\u003c\/div\u003e\u003cdiv class=\"ypc-offer-plus-page-not-available-error\"\u003e\u003ch3 class=\"ypc-offer-overlay-not-available-title\"\u003e구매할 수 없습니다.\u003c\/h3\u003e\u003cp class=\"ypc-offer-plus-page-not-available-content\"\u003e\u003c\/p\u003e  \u003cdiv class=\"ypc-offer-overlay-not-available-action yt-uix-overlay-actions\"\u003e\n    \u003cbutton class=\"yt-uix-button yt-uix-button-size-default yt-uix-button-primary yt-uix-overlay-close\" type=\"button\" onclick=\";return false;\"\u003e\u003cspan class=\"yt-uix-button-content\"\u003e닫기\u003c\/span\u003e\u003c\/button\u003e\n  \u003c\/div\u003e\n\u003c\/div\u003e\u003c\/div\u003e\n          \u003c\/div\u003e\n          \u003cdiv class=\"yt-dialog-working\"\u003e\n              \u003cdiv class=\"yt-dialog-working-overlay\"\u003e\u003c\/div\u003e\n  \u003cdiv class=\"yt-dialog-working-bubble\"\u003e\n    \u003cdiv class=\"yt-dialog-waiting-content\"\u003e\n        \u003cp class=\"yt-spinner \"\u003e\n        \u003cspan class=\"yt-spinner-img  yt-sprite\" title=\"로드 중 아이콘\"\u003e\u003c\/span\u003e\n\n    \u003cspan class=\"yt-spinner-message\"\u003e\n        진행 중...\n    \u003c\/span\u003e\n  \u003c\/p\u003e\n\n      \u003c\/div\u003e\n  \u003c\/div\u003e\n\n          \u003c\/div\u003e\n        \u003c\/div\u003e\n        \u003cdiv class=\"yt-dialog-focus-trap\" tabindex=\"0\"\u003e\u003c\/div\u003e\n      \u003c\/div\u003e\n    \u003c\/div\u003e\n  \u003c\/div\u003e\n\n\n    \u003c\/div\u003e\n\n",
+    'YPC_UNSUBSCRIBE_OVERLAY': "      \u003cdiv id=\"ypc-unsubscribe-overlay\" class=\"yt-uix-overlay\" data-disable-shortcuts=\"true\"\u003e\n      \u003cspan class=\"yt-uix-overlay-target\"\u003e\u003c\/span\u003e\n          \u003cdiv class=\"yt-dialog hid \"\u003e\n    \u003cdiv class=\"yt-dialog-base\"\u003e\n      \u003cspan class=\"yt-dialog-align\"\u003e\u003c\/span\u003e\n      \u003cdiv class=\"yt-dialog-fg\" role=\"dialog\"\u003e\n        \u003cdiv class=\"yt-dialog-fg-content\"\u003e\n          \u003cdiv class=\"yt-dialog-loading\"\u003e\n              \u003cdiv class=\"yt-dialog-waiting-content\"\u003e\n      \u003cp class=\"yt-spinner \"\u003e\n        \u003cspan class=\"yt-spinner-img  yt-sprite\" title=\"로드 중 아이콘\"\u003e\u003c\/span\u003e\n\n    \u003cspan class=\"yt-spinner-message\"\u003e\n로드 중...\n    \u003c\/span\u003e\n  \u003c\/p\u003e\n\n  \u003c\/div\u003e\n\n          \u003c\/div\u003e\n          \u003cdiv class=\"yt-dialog-content\"\u003e\n              \u003cdiv class=\"ypc-unsubscribe-overlay\"\u003e\n      \u003cdiv class=\"ypc-unsubscribe-overlay-title unsubscribe-confirm\"\u003e\n구독을 취소하시겠습니까?\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-title unsubscribe-xauth\"\u003e\n구독 취소할 수 없음\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-title unsubscribe-plus-page-error\"\u003e\n구독 취소할 수 없음\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-title unsubscribe-loading\"\u003e\n로드 중...\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-title unsubscribe-success unsubscribe-delayed ypc-unsubscribe-overlay-title-success\"\u003e\n    구독이 취소됨\n\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-title unsubscribe-error\"\u003e\n구매가 취소되지 않음\n  \u003c\/div\u003e\n\n    \u003cdiv class=\"ypc-unsubscribe-overlay-data\"\u003e\n        \u003cdiv class=\"ypc-unsubscribe-overlay-content unsubscribe-confirm ypc-unsubscribe-overlay-confirm-content\"\u003e\n    \u003cdiv class=\"ypc-unsubscribe-overlay-content-message\"\u003e\n      \u0026#39;구독 취소\u0026#39;를 클릭하면 구독이 취소되어 신용카드에 더 이상 요금이 청구되지 않습니다. 결제한 구독 기간이 끝날 때까지 콘텐츠에 계속 액세스할 수 있습니다.\n\n    \u003c\/div\u003e\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-content unsubscribe-xauth\"\u003e\n    \u003cp\u003e\nGoogle Play 뮤직을 구독하면 YouTube Music Key가 무료로 제공됩니다. 구독을 취소하려면 Google Play 뮤직의 \u003ca href=\"https:\/\/play.google.com\/music\/listen#\/settings\" target=\"_blank\"\u003e설정 \u003c\/a\u003e 페이지를 방문하세요.\n    \u003c\/p\u003e\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-content unsubscribe-plus-page-error\"\u003e\n    \u003cp\u003e\n현재 Seng-Hyun Lee 채널 관리자로 로그인되어 있습니다. YouTube에서 채널의 구독을 취소하려면 채널 소유자여야 합니다.\n    \u003c\/p\u003e\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-content unsubscribe-loading\"\u003e\n      \u003cp class=\"yt-spinner \"\u003e\n        \u003cspan class=\"yt-spinner-img  yt-sprite\" title=\"로드 중 아이콘\"\u003e\u003c\/span\u003e\n\n    \u003cspan class=\"yt-spinner-message\"\u003e\n        취소 요청을 처리하는 중...\n    \u003c\/span\u003e\n  \u003c\/p\u003e\n\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-content unsubscribe-success ypc-unsubscribe-overlay-content-success\"\u003e\n    \u003cp\u003e이 구독에 대한 이후 결제가 취소되었습니다.\n\u003c\/p\u003e\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-content unsubscribe-delayed\"\u003e\n    \u003cp\u003e\n구독이 취소되었습니다. 계정에 표시된 상태가 곧 업데이트됩니다.\n    \u003c\/p\u003e\n  \u003c\/div\u003e\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-content unsubscribe-error\"\u003e\n    \u003cp\u003e\n주문을 취소할 수 없습니다. 나중에 다시 시도하거나 \u003ca href=\"https:\/\/support.google.com\/youtube\/?p=commerce_contact\u0026amp;hl=ko\" target=\"_blank\"\u003e지원팀\u003c\/a\u003e에 문의해 주세요.\n    \u003c\/p\u003e\n  \u003c\/div\u003e\n\n          \u003cdiv class=\"ypc-unsubscribe-overlay-controls unsubscribe-confirm clearfix\"\u003e\n    \u003ca href=\"\/\/support.google.com\/youtube\/?p=unsubscribe_help\u0026amp;hl=ko\" class=\"yt-uix-button  ypc-unsubscribe-help yt-uix-sessionlink yt-uix-button-default yt-uix-button-size-default\" data-sessionlink=\"ei=XXZ1V8_pJYOU4gLxgKGwDA\" target=\"_blank\"\u003e\u003cspan class=\"yt-uix-button-content\"\u003e도움말\u003c\/span\u003e\u003c\/a\u003e\n\n    \u003cbutton class=\"yt-uix-button yt-uix-button-size-default yt-uix-button-default yt-uix-overlay-close ypc-unsubscribe-keep\" type=\"button\" onclick=\";return false;\"\u003e\u003cspan class=\"yt-uix-button-content\"\u003e구독 유지\u003c\/span\u003e\u003c\/button\u003e\n\n    \u003cbutton class=\"yt-uix-button yt-uix-button-size-default yt-uix-button-primary ypc-unsubscribe-confirm\" type=\"button\" onclick=\";return false;\" data-url=\"\/transaction_handler\"\u003e\u003cspan class=\"yt-uix-button-content\"\u003e구독취소\u003c\/span\u003e\u003c\/button\u003e\n  \u003c\/div\u003e\n\n\n  \u003cdiv class=\"ypc-unsubscribe-overlay-controls unsubscribe-success unsubscribe-xauth unsubscribe-plus-page-error unsubscribe-delayed unsubscribe-error\"\u003e\n    \u003cbutton class=\"yt-uix-button yt-uix-button-size-default yt-uix-button-primary yt-uix-overlay-close\" type=\"button\" onclick=\";return false;\"\u003e\u003cspan class=\"yt-uix-button-content\"\u003e닫기\u003c\/span\u003e\u003c\/button\u003e\n  \u003c\/div\u003e\n\n    \u003c\/div\u003e\n  \u003c\/div\u003e\n\n          \u003c\/div\u003e\n          \u003cdiv class=\"yt-dialog-working\"\u003e\n              \u003cdiv class=\"yt-dialog-working-overlay\"\u003e\u003c\/div\u003e\n  \u003cdiv class=\"yt-dialog-working-bubble\"\u003e\n    \u003cdiv class=\"yt-dialog-waiting-content\"\u003e\n        \u003cp class=\"yt-spinner \"\u003e\n        \u003cspan class=\"yt-spinner-img  yt-sprite\" title=\"로드 중 아이콘\"\u003e\u003c\/span\u003e\n\n    \u003cspan class=\"yt-spinner-message\"\u003e\n        진행 중...\n    \u003c\/span\u003e\n  \u003c\/p\u003e\n\n      \u003c\/div\u003e\n  \u003c\/div\u003e\n\n          \u003c\/div\u003e\n        \u003c\/div\u003e\n        \u003cdiv class=\"yt-dialog-focus-trap\" tabindex=\"0\"\u003e\u003c\/div\u003e\n      \u003c\/div\u003e\n    \u003c\/div\u003e\n  \u003c\/div\u003e\n\n\n    \u003c\/div\u003e\n\n"
+  });
+  yt.setConfig('GOOGLE_HELP_CONTEXT', "watch");
+ytcsi.info('st', 292);yt.setConfig({'CSI_SERVICE_NAME': "youtube",'TIMING_ACTION': "watch,watch7_html5",'TIMING_INFO': {"yt_pl":0,"yt_lt":"cold","yt_li":"1","cver":"1.20160628","e":"9405964,9406852,9416126,9416891,9419451,9420112,9422596,9426977,9428398,9431012,9433096,9433380,9433946,9434922,9435526,9435729,9435876,9436607,9437066,9437081,9437087,9437553,9437673,9438662,9438965,9439384,9439652,9440149,9440182","c":"WEB"}});  yt.setConfig({
+    'XSRF_TOKEN': "QUFFLUhqa1FyY0RIa1JHQ0JEMWNwbkk5LUU2ajJiRDZ2Z3xBQ3Jtc0tsZ1AtTjlOelV5dWhnVHVqUmFfTXJfYlhZeHhRZ3ZoaW1GOU15YnFsZHMwaldpZ3NuaUdvcG1HUG56T0pzWF9jb0RDa1NIVnZMOU9mMTdvSTFtZTR0RGtHaVBuTTJjQjdWcXJULXJ6ZngxXzZUYktUNmVGSUphV0o4NHp0NGpiWS1CamFUQVk5ZlVQVzJqaEZyeTBlQmtJQnU0M0E=",
+    'XSRF_REDIRECT_TOKEN': "02UouwT9hdaA5OT6swLA-h30r498MTQ2NzQwMjIwNUAxNDY3MzE1ODA1",
+    'XSRF_FIELD_NAME': "session_token"
+  });
+yt.setConfig('ID_TOKEN', "QUFFLUhqa19rdmNDNU9ENllCMUFuTHNfNzh2N3JDZllGd3w=");yt.setConfig('SERVICE_WORKER_KILLSWITCH', false);  yt.setConfig('THUMB_DELAY_LOAD_BUFFER', 0);
+if (window.ytcsi) {window.ytcsi.tick("jl", null, '');}</script>
+</body></html>
